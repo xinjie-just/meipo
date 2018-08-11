@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*! lixinjie 20180811 https://github.com/xinjie-just/meipo.git */
+@import "variables";
+@import "reboot";
+@import "iconfont";
+
+/*===首页===*/
+
+/*底部*/
+.footer {
+  @include wrapper-padding(40px, 480px, 80px, 480px);
+  background-color: rgba(42, 42, 42, 1);
+  color: #fff;
+  .footer-nav {
+    $height: 54px;
+    height: $height + 1px;
+    line-height: $height;
+    border-bottom: 1px solid rgba(74, 74, 74, 1);
+    text-align: center;
+    .footer-nav-list {
+      @extend .clearfix;
+      display: inline-block;
+    }
+    li {
+      float: left;
+      &:not(:last-of-type) {
+        a {
+          border-right: 1px solid;
+        }
+      }
+      a {
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+  .contact-about {
+    margin-top: 60px;
+    @extend .clearfix;
+  }
+  .contact {
+    float: left;
+    width: 50%;
+    padding-right: 50px;
+    .heading {
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    .phone {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: inherit;
+      i {
+        font-size: 1.2em;
+        margin-right: 10px;
+      }
+    }
+    .address {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 26px;
+      i {
+        font-size: 1.2em;
+        margin-right: 10px;
+      }
+    }
+    .contact-way {
+      @extend .clearfix;
+      font-size: 16px;
+      .wechat {
+        position: relative;
+        float: left;
+        i {
+          font-size: inherit;
+          color: inherit;
+        }
+        .qrcode {
+          position: absolute;
+          display: none;
+          bottom: 22px;
+          left: 0;
+          background-color: #fff;
+          padding: 5px;
+          font-size: 14px;
+          box-shadow: 0 0 5px #eaeaea;
+          img {
+            display: block;
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+      a {
+        float: left;
+        color: #fff;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .about {
+    float: right;
+    width: 50%;
+    padding-left: 50px;
+    text-align: right;
+    .footer-logo {
+      margin-bottom: 28px;
+      text-align: right;
+      img {
+        display: inline-block;
+        width: 161px;
+        height: 40px;
+      }
+    }
+    .copyright,
+    .records {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .copyright {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/*回到顶部*/
+.to-top {
+  @include transition(0.6s);
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(600px);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #000;
+  opacity: 0.4;
+  text-align: center;
+  &:hover {
+    background-color: $main-color;
+  }
+  i {
+    font-size: 26px;
+    color: #fff;
+  }
+}
