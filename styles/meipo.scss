@@ -8,85 +8,111 @@
 
 /*底部*/
 .footer {
-  @include wrapper-padding(40px, 480px, 80px, 480px);
+  @include wrapper-padding(20px, 360px, 60px, 360px);
   background-color: rgba(42, 42, 42, 1);
   color: #fff;
+  text-align: center;
   .footer-nav {
     $height: 54px;
+    width: 100%;
+    @extend %clearfix;
+    display: inline-block;
     height: $height + 1px;
     line-height: $height;
     border-bottom: 1px solid rgba(74, 74, 74, 1);
-    text-align: center;
-    .footer-nav-list {
-      @extend .clearfix;
-      display: inline-block;
-    }
-    li {
+    a {
+      display: block;
       float: left;
+      position: relative;
+      padding-right: 42px;
+      padding-left: 42px;
+      font-size: 14px;
+      color: #fff;
+      &:hover {
+        color: $main-color;
+      }
       &:not(:last-of-type) {
-        a {
-          border-right: 1px solid;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 18px;
+          background-color: #fff;
         }
       }
-      a {
-        padding-right: 30px;
-        padding-left: 30px;
-        font-size: 14px;
-        color: #fff;
-      }
     }
   }
-  .contact-about {
-    margin-top: 60px;
-    @extend .clearfix;
-  }
-  .contact {
-    float: left;
-    width: 50%;
-    padding-right: 50px;
-    .heading {
-      font-size: 16px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    .phone {
-      display: block;
+  .intro {
+    width: 100%;
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 0;
+    @extend %clearfix;
+    .footer-logo {
+      display: inline-block;
+      vertical-align: middle;
+      width: 220px;
+      text-align: left;
       font-size: 14px;
-      margin-bottom: 8px;
-      color: inherit;
-      i {
-        font-size: 1.2em;
-        margin-right: 10px;
+      img {
+        display: inline-block;
       }
     }
-    .address {
+    .other-info {
+      display: inline-block;
+      vertical-align: middle;
       font-size: 14px;
       line-height: 1.5;
-      margin-bottom: 26px;
-      i {
-        font-size: 1.2em;
-        margin-right: 10px;
+      width: calc(100% - 220px - 200px);
+      > div {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+      .contact {
+        strong {
+          font-weight: normal;
+          &:not(:last-of-type) {
+            margin-right: 10px;
+          }
+          a {
+            color: inherit;
+          }
+        }
       }
     }
     .contact-way {
-      @extend .clearfix;
-      font-size: 16px;
-      .wechat {
-        position: relative;
-        float: left;
+      width: 200px;
+      text-align: right;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      @extend %clearfix;
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+        &:not(:last-of-type) {
+          margin-right: 30px;
+        }
         i {
-          font-size: inherit;
+          font-size: 1.2em;
           color: inherit;
         }
+      }
+      .wechat {
+        position: relative;
         .qrcode {
           position: absolute;
           display: none;
           bottom: 22px;
-          left: 0;
+          right: 0;
           background-color: #fff;
           padding: 5px;
           font-size: 14px;
-          box-shadow: 0 0 5px #eaeaea;
           img {
             display: block;
             width: 90px;
@@ -94,36 +120,6 @@
           }
         }
       }
-      a {
-        float: left;
-        color: #fff;
-        &:not(:last-of-type) {
-          margin-right: 20px;
-        }
-      }
-    }
-  }
-  .about {
-    float: right;
-    width: 50%;
-    padding-left: 50px;
-    text-align: right;
-    .footer-logo {
-      margin-bottom: 28px;
-      text-align: right;
-      img {
-        display: inline-block;
-        width: 161px;
-        height: 40px;
-      }
-    }
-    .copyright,
-    .records {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .copyright {
-      margin-bottom: 5px;
     }
   }
 }

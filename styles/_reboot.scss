@@ -386,7 +386,7 @@ ul {
 }
 
 /* ===关于浮动=== */
-.clearfix {
+%clearfix {
   &:before {
     content: "";
     display: table;
