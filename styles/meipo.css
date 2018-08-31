@@ -313,6 +313,10 @@ th {
   text-align: left;
 }
 
+::selection {
+  background-color: #a57e60;
+}
+
 /* ===列表=== */
 ol,
 ul {
@@ -320,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before {
+.home-about .intro:before, .home-about .details:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before {
   content: "";
   display: table;
 }
-.footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after {
+.home-about .intro:after, .home-about .details:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after {
   content: "";
   display: table;
   clear: both;
@@ -351,6 +355,12 @@ label {
 }
 label:hover {
   opacity: .8;
+}
+
+.join-support .list li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /*! 阿里巴巴矢量图标库Iconfont */
@@ -478,10 +488,249 @@ label:hover {
 }
 
 /*===首页===*/
+section > .heading {
+  margin-bottom: 40px;
+  color: #fff;
+}
+section > .heading strong {
+  color: inherit;
+  display: block;
+  text-align: center;
+}
+section > .heading .cn {
+  line-height: 36px;
+  font-family: "webfont", Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 36px;
+  letter-spacing: 2px;
+  padding-left: 2px;
+  margin-bottom: 10px;
+}
+section > .heading .en {
+  font-family: "webfont", Arial, sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 3px;
+  line-height: 24px;
+  padding-left: 3px;
+}
+
+/*走近美珀*/
+.home-about {
+  background-color: #f5f5f5;
+  padding: 60px 360px 80px 360px;
+}
+.home-about .heading {
+  color: #000;
+}
+.home-about .intro {
+  padding: 0 20px 20px 20px;
+  height: 396px;
+  margin-bottom: 100px;
+}
+.home-about .intro figure {
+  float: left;
+  position: relative;
+  width: 530px;
+  height: 356px;
+  overflow: visible;
+}
+.home-about .intro figure > img {
+  display: block;
+  width: 530px;
+  height: 356px;
+}
+.home-about .intro figure::before, .home-about .intro figure::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: #d9dbe0;
+}
+.home-about .intro figure::before {
+  width: 20px;
+  height: 270px;
+}
+.home-about .intro figure::after {
+  width: 420px;
+  height: 20px;
+}
+.home-about .intro .text {
+  float: right;
+  width: calc(100% - 530px);
+  height: 356px;
+  background-color: #fefefe;
+  padding: 20px 30px 30px 50px;
+}
+.home-about .intro .text .heading {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 26px;
+  color: #000;
+}
+.home-about .intro .text .heading strong {
+  font-family: "webfont", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+.home-about .intro .text .heading strong::after {
+  content: "\A";
+  white-space: pre;
+}
+.home-about .intro .text .heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #505050;
+}
+.home-about .intro .text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.home-about .intro .text .more {
+  display: table-cell;
+  padding: 10px 20px;
+  border: 1px solid #666;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.home-about .details .info-left {
+  float: left;
+  text-align: right;
+  width: calc((100% - 360px) / 2);
+  padding-right: 70px;
+}
+.home-about .details .info-left li {
+  position: relative;
+  font-size: 22px;
+  color: #000;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 60px;
+}
+.home-about .details .info-left li:first-of-type {
+  margin-top: 20px;
+}
+.home-about .details .info-left li:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+.home-about .details .info-left li:nth-of-type(1)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transform: translateY(-50%);
+  content: "01";
+  font-size: 18px;
+}
+.home-about .details .info-left li:nth-of-type(2)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transform: translateY(-50%);
+  content: "02";
+  font-size: 18px;
+}
+.home-about .details .info-left li:nth-of-type(3)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transform: translateY(-50%);
+  content: "03";
+  font-size: 18px;
+}
+.home-about .details .info-left li:nth-of-type(4)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transform: translateY(-50%);
+  content: "04";
+  font-size: 18px;
+}
+.home-about .details .info-left li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(-40px * 0.207);
+  width: calc(40px * 1.414);
+  height: 1px;
+  background-color: #333;
+  transform: translateY(-50%) rotate(-45deg);
+  transform-origin: center;
+}
+.home-about .details > figure {
+  width: 360px;
+  height: 360px;
+}
+.home-about .details .info-right {
+  float: right;
+  text-align: left;
+  width: calc((100% - 360px) / 2);
+  padding-left: 80px;
+}
+
+/*加盟支持*/
+.join-support {
+  width: 100%;
+  height: 470px;
+  background: #373b4b url("../images/join-bg.png") no-repeat center;
+  padding: 80px 360px 60px 360px;
+}
+.join-support .list {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+.join-support .list li {
+  display: inline-block;
+  width: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.join-support .list li:nth-of-type(10) ~ li {
+  display: none;
+}
+.join-support .list li i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
+  font-size: 3em;
+}
+
 /*底部*/
 .footer {
   padding: 20px 360px 60px 360px;
-  background-color: #2a2a2a;
+  background: #2a2a2a url("../images/copyright-bg.png") no-repeat center right 120px;
   color: #fff;
   text-align: center;
 }

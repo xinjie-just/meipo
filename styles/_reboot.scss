@@ -75,7 +75,7 @@ html {
   width: $width;
 }
 
-@mixin wrapper-padding($up: 60px, $right: 480px, $bottom: 60px, $left: 480px) {
+@mixin wrapper-padding($up: 60px, $right: 360px, $bottom: 60px, $left: 360px) {
   padding: $up $right $bottom $left;
 }
 
@@ -375,6 +375,10 @@ table {
 caption,
 th {
   text-align: left;
+}
+
+::selection {
+  background-color: $main-color;
 }
 
 /* ===列表=== */
