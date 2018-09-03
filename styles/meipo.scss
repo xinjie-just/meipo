@@ -7,7 +7,9 @@
 /*===首页===*/
 
 section {
+@include wrapper-padding($up: 60px, $bottom: 60px);
   > .heading {
+    @include center-content(1200px);
     margin-bottom: 40px;
     color: #fff;
     strong {
@@ -38,11 +40,12 @@ section {
 /*走近美珀*/
 .home-about {
   background-color: #f5f5f5;
-  @include wrapper-padding(60px, 360px, 80px, 360px);
+  @include wrapper-padding(60px, 80px);
   .heading {
     color: #000;
   }
-  .intro {
+  > .intro {
+    @include center-content(1200px);
     $width: 530px;
     $height: 356px;
     padding: 0 20px 20px 20px;
@@ -119,16 +122,20 @@ section {
       }
       .more {
         display: table-cell;
-        padding: 10px 20px;
-        border: 1px solid #666;
+        padding: 10px 23px;
+        border: 1px solid;
         text-transform: uppercase;
         font-size: 14px;
         color: #666;
         text-align: center;
+        &:hover {
+          color: $main-color;
+        }
       }
     }
   }
-  .details {
+  > .details {
+    @include center-content(1200px);
     @extend %clearfix;
     $size: 360px;
     .info-left {
@@ -138,6 +145,8 @@ section {
       padding-right: 70px;
       li {
         $size2: 40px;
+        $liLen: 4;  // li的个数
+        z-index: 100;
         position: relative;
         font-size: 22px;
         color: #000;
@@ -145,30 +154,97 @@ section {
         line-height: $size2;
         padding-right: 60px;
         &:first-of-type {
-          margin-top: 20px;
+          margin-top: 25px;
         }
-        &:not(:last-of-type) {
-          margin-bottom: 40px;
+        &:not(:first-of-type) {
+          margin-top: 50px;
         }
-        @for $i from 1 through 4 {
+        @for $i from 1 through $liLen {
           &:nth-of-type(#{$i})::after {
+            z-index: 102;
             position: absolute;
             top: 50%;
-            right: 0;
-            width: $size2;
-            height: $size2;
+            right: calc((#{$size2} - #{$size2} / 2) / 2);  // #{$size2} / 2为宽
+            width: calc(#{$size2} / 2);
+            height: calc(#{$size2} / 2);
             text-align: center;
-            line-height: $size2;
+            line-height: calc(#{$size2} / 2);
             transform: translateY(-50%);
             content: "0#{$i}";
             font-size: 18px;
+            background-color: #fff;
           }
         }
         &::before {
+          z-index: 101;
           content: "";
           position: absolute;
           top: 50%;
           right: calc(#{ - $size2} * 0.207);
+          width: calc(#{$size2} * 1.414);
+          height: 1px;
+          background-color: #333;
+          //background-clip: content-box;
+          transform: translateY(-50%) rotate(-45deg);
+          transform-origin: center;
+        }
+      }
+    }
+    > figure {
+      float: left;
+      width: $size;
+      height: $size;
+      img {
+        display: block;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+      }
+    }
+    .info-right {
+      float: left;
+      text-align: left;
+      width: calc((100% - #{$size}) / 2);
+      padding-left: 80px;
+      li {
+        $size2: 40px;
+        $liLen: 4; // li的个数
+        z-index: 100;
+        position: relative;
+        font-size: 22px;
+        color: #000;
+        height: $size2;
+        line-height: $size2;
+        padding-left: 60px;
+        &:first-of-type {
+          margin-top: 25px;
+        }
+        &:not(:first-of-type) {
+          margin-top: 50px;
+        }
+        @for $j from 1 through $liLen {
+          $add: $j + $liLen;
+          &:nth-of-type(#{$j})::after {
+            z-index: 102;
+            content: "0#{$add}";
+            position: absolute;
+            top: 50%;
+            left: calc((#{$size2} - #{$size2} / 2) / 2);  // #{$size2} / 2为宽
+            width: calc(#{$size2} / 2);
+            height: calc(#{$size2} / 2);
+            text-align: center;
+            line-height: calc(#{$size2} / 2);
+            transform: translateY(-50%);
+            font-size: 18px;
+            background-color: #fff;
+          }
+        }
+        &::before {
+          z-index: 101;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: calc(#{ - $size2} * 0.207);
           width: calc(#{$size2} * 1.414);
           height: 1px;
           background-color: #333;
@@ -177,26 +253,232 @@ section {
         }
       }
     }
-    > figure {
-      width: $size;
-      height: $size;
+  }
+}
+
+/*美珀产品中心*/
+.product-center {
+  @include wrapper-padding(80px, 80px);
+  .heading {
+    color: #333;
+  }
+  .product {
+    @extend %clearfix;
+    @include center-content(1200px);
+    .side-left {
+      float: left;
+      width: 240px;
     }
-    .info-right {
+    .slogen {
+      width: 240px;
+      height: 180px;
+      background: #212d4e url("../images/product-slogen-bg.png") center no-repeat;
+      padding-top: 50px;
+      padding-left: 20px;
+      strong {
+        font-family: "webfont", Arial, sans-serif;
+        color: #fff;
+        &.en {
+          font-weight: bolder;
+          text-transform: capitalize;
+          font-size: 12px;
+          &.important {
+            font-size: 34px;
+            font-weight: bolder;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 6px;
+          }
+        }
+        &.cn {
+          font-size: 12px;
+          margin-bottom: 4px;
+          letter-spacing: 8px;
+        }
+        &::after {
+          content: "\A";
+          white-space: pre;
+        }
+      }
+    }
+    .product-nav {
+      margin-bottom: 30px;
+      a {
+        position: relative;
+        display: block;
+        width: inherit;
+        height: 68px;
+        line-height: 67px;
+        border-bottom: 1px solid #ccc;
+        font-size: 20px;
+        color: #333;
+        padding-left: 30px;
+        padding-right: 20px;
+        &:hover {
+          color: $main-color;
+        }
+        &::after {
+          content: ">";
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          width: 20px;
+          height: 20px;
+          line-height: 18px;
+          text-align: center;
+          font-size: 14px;
+          color: inherit;
+          border: 1px solid;
+          border-radius: 50%;
+        }
+      }
+    }
+    .phone {
+      margin-bottom: 20px;
+      padding-left: 30px;
+      strong {
+        display: block;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: normal;
+      }
+      a {
+        display: block;
+        font-size: 20px;
+        color: $main-color;
+      }
+    }
+    .more {
+      display: inline-block;
+      padding: 10px 23px;
+      margin-left: 30px;
+      border: 1px solid;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      &:hover {
+        color: $main-color;
+      }
+    }
+    .product-list {
       float: right;
-      text-align: left;
-      width: calc((100% - #{$size}) / 2);
-      padding-left: 80px;
+      width: 940px;
+      @extend %clearfix;
+      li {
+        $width: 300px;
+        $height: 240px;
+        width: $width;
+        height: $height;
+        float: left;
+        margin-right: 20px;
+        &:first-of-type {
+          width: 620px;
+          height: 500px;
+          img {
+            display: block;
+            width: 618px;
+            height: 418px;
+          }
+          strong {
+            display: block;
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            padding-right: 30px;
+            padding-left: 30px;
+            @extend %ellipsis;
+          }
+          p {
+            font-size: 12px;
+            color: #666;
+            padding-right: 30px;
+            padding-left: 30px;
+            @extend %ellipsis;
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(6){
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+        &:not(:first-of-type) {
+          img {
+            display: block;
+            width: $width - 2;
+            height: $height - 42;
+          }
+          strong {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            height: 40px;
+            line-height: 40px;
+            padding-right: 30px;
+            padding-left: 30px;
+            @extend %ellipsis;
+          }
+        }
+        a {
+          display: block;
+          position: relative;
+          width: inherit;
+          height: inherit;
+          background: #fafafa;
+          border: 1px solid #ccc;
+          overflow: hidden;
+          .info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-top: $height - 2;
+            display: block;
+            height: $height;
+            opacity: 0.8;
+            background: #33436a;
+            color: #fff;
+            padding: 30px;
+            transition: all 1.4s ease 0s;
+            strong {
+              font-size: 16px;
+              margin-bottom: 14px;
+              @extend %ellipsis;
+              color: inherit;
+              padding-right: 0;
+              padding-left: 0;
+            }
+            p {
+              font-size: 14px;
+              line-height: 1.6em;
+              max-height: calc(1.6em * 6);
+              color: inherit;
+              @include line-clamp(6);
+              white-space: normal;;
+            }
+          }
+          &:hover {
+            .info {
+              margin-top: -($height - 2);
+            }
+          }
+        }
+      }
     }
   }
 }
+
 /*加盟支持*/
 .join-support {
   width: 100%;
   height: 470px;
   background: #373b4b url("../images/join-bg.png") no-repeat center;
-  @include wrapper-padding(80px, 360px, 60px, 360px);
   .list {
-    width: 100%;
+    @include center-content(1200px);
     text-align: center;
     font-size: 0;
     li {
@@ -223,17 +505,156 @@ section {
   }
 }
 
+/*体验店风采*/
+.store-image {
+  background-color: #f5f5f5;
+  .heading {
+    color: #000;
+  }
+  .store-image-carousel {
+    @include center-content(1200px);
+    .carousel-inner {
+      width: 1000px;
+      height: 420px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .carousel-control {
+      text-shadow: none;
+      background: none;
+      opacity: 1;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      border-radius: 100%;
+      span {
+        color: inherit;
+        font-size: 28px;
+      }
+      &:hover {
+        color: $main-color;
+      }
+      &.left {
+        background-image: none;
+      }
+      &.right {
+        background-image: none;
+      }
+    }
+  }
+}
+
+/*新闻咨询*/
+.news {
+  background-color: #fff;
+  .heading {
+    color: #333;
+  }
+  .list {
+    $width: 340px;
+    @include center-content(1200px);
+    @extend %clearfix;
+    .importance-news {
+      float: left;
+      width: $width;
+      img {
+        display: block;
+        width: $width;
+        height: 200px;
+        margin-bottom: 16px;
+      }
+      .heading {
+        display: block;
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: $text-color;
+        @extend %ellipsis;
+        &:hover {
+          color: $main-color;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: $text-color;
+        @extend %ellipsis;
+      }
+    }
+    .normal-news {
+      float: right;
+      width: calc(100% - #{$width} - 40px);
+      @extend %clearfix;
+      li {
+        width: calc(50% - 20px);
+        float: left;
+        &:nth-of-type(2n + 1) {
+          margin-right: 40px;
+        }
+        &:not(:first-of-type):not(:nth-of-type(2)) {
+          margin-top: 30px;
+        }
+        time {
+          display: block;
+          font-size: 16px;
+          line-height: 1.2;
+          margin-bottom: 10px;
+        }
+        .heading {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          margin-bottom: 12px;
+          color: $text-color;
+          border-bottom: 1px solid #e5e5e5;
+          padding-bottom: 6px;
+          line-height: 1.7;
+          @extend %ellipsis;
+          &:hover {
+            color: $main-color;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.6em;
+          max-height: 3.2em;
+          @include line-clamp(2);
+        }
+      }
+    }
+  }
+  .more {
+    display: table;
+    margin: 40px auto 0;
+    padding: 10px 23px;
+    border: 1px solid;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
 /*底部*/
 .footer {
-  @include wrapper-padding(20px, 360px, 60px, 360px);
+  @include wrapper-padding(60px, 60px);
   background: rgba(42, 42, 42, 1) url("../images/copyright-bg.png") no-repeat center right 120px;
   color: #fff;
   text-align: center;
   .footer-nav {
+    @include center-content(1200px);
     $height: 54px;
-    width: 100%;
     @extend %clearfix;
-    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
     height: $height + 1px;
     line-height: $height;
     border-bottom: 1px solid rgba(74, 74, 74, 1);
@@ -263,7 +684,7 @@ section {
     }
   }
   .intro {
-    width: 100%;
+    @include center-content(1200px);
     margin-top: 50px;
     display: inline-block;
     font-size: 0;

@@ -75,8 +75,8 @@ html {
   width: $width;
 }
 
-@mixin wrapper-padding($up: 60px, $right: 360px, $bottom: 60px, $left: 360px) {
-  padding: $up $right $bottom $left;
+@mixin wrapper-padding($up: 60px, $bottom: 60px) {
+  padding: $up $bottom;
 }
 
 %page {
