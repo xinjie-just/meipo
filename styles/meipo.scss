@@ -7,7 +7,7 @@
 /*===首页===*/
 
 section {
-@include wrapper-padding($up: 60px, $bottom: 60px);
+@include wrapper-padding(60px, 60px);
   > .heading {
     @include center-content(1200px);
     margin-bottom: 40px;

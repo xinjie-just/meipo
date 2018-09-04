@@ -489,7 +489,8 @@ label:hover {
 
 /*===首页===*/
 section {
-  padding: 60px 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 section > .heading {
   display: block;
@@ -526,7 +527,8 @@ section > .heading .en {
 /*走近美珀*/
 .home-about {
   background-color: #f5f5f5;
-  padding: 60px 80px;
+  padding-top: 60px;
+  padding-bottom: 80px;
 }
 .home-about .heading {
   color: #000;
@@ -818,7 +820,8 @@ section > .heading .en {
 
 /*美珀产品中心*/
 .product-center {
-  padding: 80px 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .product-center .heading {
   color: #333;
@@ -1206,7 +1209,8 @@ section > .heading .en {
 
 /*底部*/
 .footer {
-  padding: 60px 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #2a2a2a url("../images/copyright-bg.png") no-repeat center right 120px;
   color: #fff;
   text-align: center;

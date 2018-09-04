@@ -70,13 +70,18 @@ html {
 
 @mixin center-content($width: 1200px) {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin: {
+    right: auto;
+    left: auto;
+  }
   width: $width;
 }
 
 @mixin wrapper-padding($up: 60px, $bottom: 60px) {
-  padding: $up $bottom;
+  padding: {
+    top: $up;
+    bottom: $bottom;
+  }
 }
 
 %page {
