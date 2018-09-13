@@ -8,6 +8,13 @@ $(window).scroll(function() {
     }else {
         $("#toTop").fadeOut(); /* 当滑动到小于(页面被卷去的高度)200px 时，回到顶部图标隐藏 */
     }
+
+    // 头部
+    if($(window).scrollTop() > 0) {
+        $(".js-heading-wrapper").addClass("scroll");
+    } else {
+        $(".js-heading-wrapper").removeClass("scroll");
+    }
 });
 $("#toTop").click(function () {
     $("html, body").animate({scrollTop: 0}, 600); /* 持续时间为 600ms */

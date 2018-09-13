@@ -5,6 +5,101 @@
 @import "iconfont";
 
 /*===首页===*/
+/*头部，banner*/
+.header {
+  z-index: 1000;
+  position: relative;
+  .heading-wrapper {
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    transition: all .6s ease 0s;
+    color: #fff;
+    &:hover,
+    &.scroll {
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
+      color: #000;
+      .header-logo {
+        background-image: url("../images/logo-black.png");
+      }
+      .phone {
+        color: #333;
+      }
+    }
+  }
+  .heading {
+    @include center-content(1200px);
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    @extend %clearfix;
+    .header-logo {
+      float: left;
+      width: 326px;
+      height: inherit;
+      background: url("../images/logo-white.png") no-repeat center;
+      a {
+        display: block;
+      }
+    }
+    .phone-menu {
+      float: right;
+      width: calc(100% - 400px);
+      height: inherit;
+      padding-top: 40px;
+      .phone {
+        color: inherit;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: right;
+        padding-right: 18px;
+        a {
+          color: inherit;
+          margin-left: 10px;
+        }
+      }
+      .header-nav {
+        font-size: 0;
+        text-align: right;
+        a {
+          display: inline-block;
+          color: inherit;
+          font-size: 14px;
+          padding: 5px 18px;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+.banner-carousel {
+  left: 50%;
+  transform: translateX(-50%);
+  .carousel-indicators {
+    li {
+      width: 30px;
+      height: 4px;
+      margin: 12px;
+      background-color: rgba(255, 255, 255, .3);
+      border: none;
+      border-radius: 11px;
+      &.active {
+        width: 30px;
+        height: 4px;
+        margin: 12px;
+        background-color: #fff;
+      }
+    }
+  }
+}
 
 section {
 @include wrapper-padding(60px, 60px);
@@ -138,55 +233,63 @@ section {
     @include center-content(1200px);
     @extend %clearfix;
     $size: 360px;
-    .info-left {
+    .info {
       float: left;
-      text-align: right;
       width: calc((100% - #{$size}) / 2);
-      padding-right: 70px;
-      li {
-        $size2: 40px;
-        $liLen: 4;  // li的个数
-        z-index: 100;
+      a {
         position: relative;
+        display: block;
+        width: $size;
+        height: 100px;
+        line-height: 100px;
         font-size: 22px;
-        color: #000;
-        height: $size2;
-        line-height: $size2;
-        padding-right: 60px;
-        &:first-of-type {
-          margin-top: 25px;
+        background-repeat: no-repeat;
+        strong {
+          display: block;
+          height: inherit;
+          line-height: inherit;
+          color: #000;
+          font-size: 22px;
+          @extend %ellipsis;
         }
-        &:not(:first-of-type) {
-          margin-top: 50px;
-        }
-        @for $i from 1 through $liLen {
-          &:nth-of-type(#{$i})::after {
-            z-index: 102;
-            position: absolute;
-            top: 50%;
-            right: calc((#{$size2} - #{$size2} / 2) / 2);  // #{$size2} / 2为宽
-            width: calc(#{$size2} / 2);
-            height: calc(#{$size2} / 2);
-            text-align: center;
-            line-height: calc(#{$size2} / 2);
-            transform: translateY(-50%);
-            content: "0#{$i}";
-            font-size: 18px;
-            background-color: #fff;
-          }
-        }
-        &::before {
-          z-index: 101;
-          content: "";
+        p {
           position: absolute;
           top: 50%;
-          right: calc(#{ - $size2} * 0.207);
-          width: calc(#{$size2} * 1.414);
-          height: 1px;
-          background-color: #333;
-          //background-clip: content-box;
-          transform: translateY(-50%) rotate(-45deg);
-          transform-origin: center;
+          transform: translateY(-50%);
+          display: none;
+          line-height: 1.6em;
+          max-height: 4.8em;
+          width: 260px;
+          font-size: 14px;
+          color: #333;
+        }
+        &:hover {
+          background-color: #dadbdc;
+          strong {
+            display: none;
+          }
+          p {
+            display: block;
+            @include line-clamp(3);
+          }
+        }
+      }
+    }
+    .info-left {
+      padding-right: 40px;
+      a {
+        background-position: right 10px center;
+        padding-right: 80px;
+        @for $i from 1 through 4 {
+          &:nth-of-type(#{$i}) {
+            background-image: url("../images/no0#{$i}.png");
+          }
+        }
+        strong {
+          text-align: right;
+        }
+        p {
+          margin-left: 30px;
         }
       }
     }
@@ -202,54 +305,18 @@ section {
       }
     }
     .info-right {
-      float: left;
-      text-align: left;
-      width: calc((100% - #{$size}) / 2);
-      padding-left: 80px;
-      li {
-        $size2: 40px;
-        $liLen: 4; // li的个数
-        z-index: 100;
-        position: relative;
-        font-size: 22px;
-        color: #000;
-        height: $size2;
-        line-height: $size2;
-        padding-left: 60px;
-        &:first-of-type {
-          margin-top: 25px;
-        }
-        &:not(:first-of-type) {
-          margin-top: 50px;
-        }
-        @for $j from 1 through $liLen {
-          $add: $j + $liLen;
-          &:nth-of-type(#{$j})::after {
-            z-index: 102;
-            content: "0#{$add}";
-            position: absolute;
-            top: 50%;
-            left: calc((#{$size2} - #{$size2} / 2) / 2);  // #{$size2} / 2为宽
-            width: calc(#{$size2} / 2);
-            height: calc(#{$size2} / 2);
-            text-align: center;
-            line-height: calc(#{$size2} / 2);
-            transform: translateY(-50%);
-            font-size: 18px;
-            background-color: #fff;
+      padding-left: 40px;
+      a {
+        background-position: left 10px center;
+        padding-left: 80px;
+        @for $i from 1 through 4 {
+          &:nth-of-type(#{$i}) {
+            $j: $i + 4;
+            background-image: url("../images/no0#{$j}.png");
           }
         }
-        &::before {
-          z-index: 101;
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: calc(#{ - $size2} * 0.207);
-          width: calc(#{$size2} * 1.414);
-          height: 1px;
-          background-color: #333;
-          transform: translateY(-50%) rotate(-45deg);
-          transform-origin: center;
+        strong {
+          text-align: left;
         }
       }
     }
@@ -662,8 +729,8 @@ section {
       display: block;
       float: left;
       position: relative;
-      padding-right: 42px;
-      padding-left: 42px;
+      padding-right: 40px;
+      padding-left: 40px;
       font-size: 14px;
       color: #fff;
       &:hover {
@@ -686,18 +753,14 @@ section {
   .intro {
     @include center-content(1200px);
     margin-top: 50px;
-    display: inline-block;
     font-size: 0;
     @extend %clearfix;
     .footer-logo {
       display: inline-block;
       vertical-align: middle;
-      width: 220px;
-      text-align: left;
+      width: 192px;
+      height: 60px;
       font-size: 14px;
-      img {
-        display: inline-block;
-      }
     }
     .other-info {
       display: inline-block;
@@ -705,9 +768,12 @@ section {
       font-size: 14px;
       line-height: 1.5;
       width: calc(100% - 220px - 200px);
+      padding-left: 150px;
+      text-align: left;
       > div {
+        line-height: 1.5em;
         &:not(:last-of-type) {
-          margin-bottom: 10px;
+          margin-bottom: 6px;
         }
       }
       .contact {

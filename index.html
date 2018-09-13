@@ -12,9 +12,56 @@
         <link rel="stylesheet" href="styles/meipo.css">
     </head>
     <body>
-        <header id="header" role="banner">
+        <header id="header" role="banner" class="header">
+            <div class="heading-wrapper js-heading-wrapper">
+                <div class="heading">
+                    <h2 class="header-logo js-header-logo"></h2>
+                    <div class="phone-menu">
+                        <div class="phone js-phone">加盟热线 <a href="tel:4006570567" title="给我们打电话">4006570567</a></div>
+                        <nav class="header-nav" role="navigation">
+                            <a href="#" title="关于美珀">关于美珀</a>
+                            <a href="#" title="产品中心">产品中心</a>
+                            <a href="#" title="案例中心">案例中心</a>
+                            <a href="#" title="招商加盟">招商加盟</a>
+                            <a href="#" title="体验店风采">体验店风采</a>
+                            <a href="#" title="新闻动态">新闻动态</a>
+                            <a href="#" title="联系我们">联系我们</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="banner-carousel" class="carousel slide banner-carousel" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#banner-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#banner-carousel" data-slide-to="1"></li>
+                    <li data-target="#banner-carousel" data-slide-to="2"></li>
+                    <li data-target="#banner-carousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a href="#" title="">
+                            <img src="images/banner1.png" alt="美珀门窗banner">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" title="">
+                            <img src="images/banner1.png" alt="美珀门窗banner">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" title="">
+                            <img src="images/banner1.png" alt="美珀门窗banner">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" title="">
+                            <img src="images/banner1.png" alt="美珀门窗banner">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </header>
-        <main id="main" role="main">
+        <main id="main" role="main" class="main">
             <!--走近美珀-->
             <section class="home-about">
                 <h3 class="heading">
@@ -36,21 +83,44 @@
                     </div>
                 </div>
                 <div class="details">
-                    <ul class="info-left">
-                        <li>10年专注高端门窗定制</li>
-                        <li>现代化门窗产业园区</li>
-                        <li>系统门窗研发团队</li>
-                        <li>6S生产管理体系</li>
-                    </ul>
+                    <aside class="info info-left">
+                        <a href="#" title="">
+                            <strong>10年专注高端门窗定制</strong>
+                            <p>10年专注高端门窗定制10年专注高端门窗定制10年专注高端门窗定制10年专注高端门窗定制10年专注高端门窗定制</p>
+                        </a>
+                        <a href="#" title="">
+                            <strong>现代化门窗产业园区</strong>
+                            <p>现代化门窗产业园区现代化门窗产业园区现代化门窗产业园区现代化门窗产业园区现代化门窗产业园区</p>
+                        </a>
+                        <a href="#" title="">
+                            <strong>系统门窗研发团队</strong>
+                            <p>系统门窗研发团队系统门窗研发团队系统门窗研发团队系统门窗研发团队系统门窗研发团队系统门窗研发团队</p>
+                        </a>
+                        <a href="#" title="">
+                            <strong>6S生产管理体系</strong>
+                            <p>6S生产管理体系6S生产管理体系6S生产管理体系6S生产管理体系6S生产管理体系</p>
+                        </a>
+                    </aside>
                     <figure>
                         <img src="images/about2.png" alt="美珀门窗形象展示">
                     </figure>
-                    <ul class="info-right">
-                        <li>现代美学+功能至上</li>
-                        <li>品牌识别系统</li>
-                        <li>系统营销管理</li>
-                        <li>加盟扶持政策</li>
-                    </ul>
+                    <aside class="info info-right">
+                        <a href="#" title="">
+                            <strong>现代美学+功能至上</strong>
+                            <p>现代美学+功能至上现代美学+功能至上现代美学+功能至上现代美学+功能至上现代美学+功能至上现代美学+功能至上</p>
+                        </a>
+                        <a href="#" title="">
+                            <strong>品牌识别系统</strong>
+                            <p>品牌识别系统品牌识别系统品牌识别系统品牌识别系统品牌识别系统品牌识别系统品牌识别系统品牌识别系统</p>
+                        </a>
+                        <a href="#" title="">
+                            <strong>系统营销管理</strong>
+                            <p>系统营销管理系统营销管理系统营销管理系统营销管理系统营销管理系统营销管理</p>
+                        <a href="#" title="">
+                            <strong>加盟扶持政策</strong>
+                            <p>加盟扶持政策加盟扶持政策加盟扶持政策加盟扶持政策加盟扶持政策加盟扶持政策加盟扶持政策</p>
+                        </a>
+                    </aside>
                 </div>
 
             </section>
@@ -166,7 +236,7 @@
                     <strong class="cn">体验店风采</strong>
                     <strong class="en">store image</strong>
                 </h3>
-                <div id="carousel-example-generic" class="carousel slide store-image-carousel" data-ride="carousel">
+                <div id="store-image-carousel" class="carousel slide store-image-carousel" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="images/stroe-image1.png" alt="体验店风采">
@@ -181,11 +251,11 @@
                             <img src="images/stroe-image4.png" alt="体验店风采">
                         </div>
                     </div>
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" title="上一张">
+                    <a class="left carousel-control" href="#store-image-carousel" role="button" data-slide="prev" title="上一张">
                         <span class="iconfont icon-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" title="下一张">
+                    <a class="right carousel-control" href="#store-image-carousel" role="button" data-slide="next" title="下一张">
                         <span class="iconfont icon-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -230,7 +300,7 @@
             </section>
         </main>
         <footer id="footer" class="footer" role="contentinfo">
-            <nav id="footerNav" class="footer-nav" role="navigation">
+            <nav class="footer-nav">
                 <!-- 当前菜单时，a 添加 active 类 -->
                 <a href="#" title="首页" class="active">首页</a>
                 <a href="#" title="关于美珀">关于美珀</a>
@@ -242,9 +312,7 @@
                 <a href="#" title="联系我们">联系我们</a>
             </nav>
             <div class="intro">
-                <figure class="footer-logo">
-                    <img src="images/footer-logo.png" alt="美珀门窗logo">
-                </figure>
+                <img src="images/footer-logo.png" alt="美珀门窗logo" class="footer-logo">
                 <div class="other-info">
                     <div class="copyright">四川美珀门窗有限公司 Copyright &copy; 版权所有 备案号：蜀ICP备 1234567890号</div>
                     <div class="contact">

@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .news .list:before, .news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .news .list:before, .news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before {
   content: "";
   display: table;
 }
-.home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .news .list:after, .news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .news .list:after, .news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after {
   content: "";
   display: table;
   clear: both;
@@ -357,7 +357,7 @@ label:hover {
   opacity: .8;
 }
 
-.product-center .product .product-list li:first-of-type strong, .product-center .product .product-list li:first-of-type p, .product-center .product .product-list li:not(:first-of-type) strong, .product-center .product .product-list li a .info strong, .join-support .list li, .news .list .importance-news .heading, .news .list .importance-news p, .news .list .normal-news li .heading {
+.home-about > .details .info a strong, .product-center .product .product-list li:first-of-type strong, .product-center .product .product-list li:first-of-type p, .product-center .product .product-list li:not(:first-of-type) strong, .product-center .product .product-list li a .info strong, .join-support .list li, .news .list .importance-news .heading, .news .list .importance-news p, .news .list .normal-news li .heading {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -488,6 +488,102 @@ label:hover {
 }
 
 /*===首页===*/
+/*头部，banner*/
+.header {
+  z-index: 1000;
+  position: relative;
+}
+.header .heading-wrapper {
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: transparent;
+  transition: all .6s ease 0s;
+  color: #fff;
+}
+.header .heading-wrapper:hover, .header .heading-wrapper.scroll {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+.header .heading-wrapper:hover .header-logo, .header .heading-wrapper.scroll .header-logo {
+  background-image: url("../images/logo-black.png");
+}
+.header .heading-wrapper:hover .phone, .header .heading-wrapper.scroll .phone {
+  color: #333;
+}
+.header .heading {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.header .heading .header-logo {
+  float: left;
+  width: 326px;
+  height: inherit;
+  background: url("../images/logo-white.png") no-repeat center;
+}
+.header .heading .header-logo a {
+  display: block;
+}
+.header .heading .phone-menu {
+  float: right;
+  width: calc(100% - 400px);
+  height: inherit;
+  padding-top: 40px;
+}
+.header .heading .phone-menu .phone {
+  color: inherit;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: right;
+  padding-right: 18px;
+}
+.header .heading .phone-menu .phone a {
+  color: inherit;
+  margin-left: 10px;
+}
+.header .heading .phone-menu .header-nav {
+  font-size: 0;
+  text-align: right;
+}
+.header .heading .phone-menu .header-nav a {
+  display: inline-block;
+  color: inherit;
+  font-size: 14px;
+  padding: 5px 18px;
+}
+.header .heading .phone-menu .header-nav a:hover {
+  color: #a57e60;
+}
+
+.banner-carousel {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner-carousel .carousel-indicators li {
+  width: 30px;
+  height: 4px;
+  margin: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 11px;
+}
+.banner-carousel .carousel-indicators li.active {
+  width: 30px;
+  height: 4px;
+  margin: 12px;
+  background-color: #fff;
+}
+
 section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -628,94 +724,77 @@ section > .heading .en {
   margin-left: auto;
   width: 1200px;
 }
-.home-about > .details .info-left {
+.home-about > .details .info {
   float: left;
-  text-align: right;
   width: calc((100% - 360px) / 2);
-  padding-right: 70px;
 }
-.home-about > .details .info-left li {
-  z-index: 100;
+.home-about > .details .info a {
   position: relative;
+  display: block;
+  width: 360px;
+  height: 100px;
+  line-height: 100px;
   font-size: 22px;
+  background-repeat: no-repeat;
+}
+.home-about > .details .info a strong {
+  display: block;
+  height: inherit;
+  line-height: inherit;
   color: #000;
-  height: 40px;
-  line-height: 40px;
-  padding-right: 60px;
+  font-size: 22px;
 }
-.home-about > .details .info-left li:first-of-type {
-  margin-top: 25px;
-}
-.home-about > .details .info-left li:not(:first-of-type) {
-  margin-top: 50px;
-}
-.home-about > .details .info-left li:nth-of-type(1)::after {
-  z-index: 102;
+.home-about > .details .info a p {
   position: absolute;
   top: 50%;
-  right: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
   transform: translateY(-50%);
-  content: "01";
-  font-size: 18px;
-  background-color: #fff;
+  display: none;
+  line-height: 1.6em;
+  max-height: 4.8em;
+  width: 260px;
+  font-size: 14px;
+  color: #333;
 }
-.home-about > .details .info-left li:nth-of-type(2)::after {
-  z-index: 102;
-  position: absolute;
-  top: 50%;
-  right: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  content: "02";
-  font-size: 18px;
-  background-color: #fff;
+.home-about > .details .info a:hover {
+  background-color: #dadbdc;
 }
-.home-about > .details .info-left li:nth-of-type(3)::after {
-  z-index: 102;
-  position: absolute;
-  top: 50%;
-  right: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  content: "03";
-  font-size: 18px;
-  background-color: #fff;
+.home-about > .details .info a:hover strong {
+  display: none;
 }
-.home-about > .details .info-left li:nth-of-type(4)::after {
-  z-index: 102;
-  position: absolute;
-  top: 50%;
-  right: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  content: "04";
-  font-size: 18px;
-  background-color: #fff;
+.home-about > .details .info a:hover p {
+  display: block;
+  /*多行文本省略*/
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
-.home-about > .details .info-left li::before {
-  z-index: 101;
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(-40px * 0.207);
-  width: calc(40px * 1.414);
-  height: 1px;
-  background-color: #333;
-  transform: translateY(-50%) rotate(-45deg);
-  transform-origin: center;
+.home-about > .details .info-left {
+  padding-right: 40px;
+}
+.home-about > .details .info-left a {
+  background-position: right 10px center;
+  padding-right: 80px;
+}
+.home-about > .details .info-left a:nth-of-type(1) {
+  background-image: url("../images/no01.png");
+}
+.home-about > .details .info-left a:nth-of-type(2) {
+  background-image: url("../images/no02.png");
+}
+.home-about > .details .info-left a:nth-of-type(3) {
+  background-image: url("../images/no03.png");
+}
+.home-about > .details .info-left a:nth-of-type(4) {
+  background-image: url("../images/no04.png");
+}
+.home-about > .details .info-left a strong {
+  text-align: right;
+}
+.home-about > .details .info-left a p {
+  margin-left: 30px;
 }
 .home-about > .details > figure {
   float: left;
@@ -729,93 +808,26 @@ section > .heading .en {
   border-radius: 50%;
 }
 .home-about > .details .info-right {
-  float: left;
-  text-align: left;
-  width: calc((100% - 360px) / 2);
+  padding-left: 40px;
+}
+.home-about > .details .info-right a {
+  background-position: left 10px center;
   padding-left: 80px;
 }
-.home-about > .details .info-right li {
-  z-index: 100;
-  position: relative;
-  font-size: 22px;
-  color: #000;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 60px;
+.home-about > .details .info-right a:nth-of-type(1) {
+  background-image: url("../images/no05.png");
 }
-.home-about > .details .info-right li:first-of-type {
-  margin-top: 25px;
+.home-about > .details .info-right a:nth-of-type(2) {
+  background-image: url("../images/no06.png");
 }
-.home-about > .details .info-right li:not(:first-of-type) {
-  margin-top: 50px;
+.home-about > .details .info-right a:nth-of-type(3) {
+  background-image: url("../images/no07.png");
 }
-.home-about > .details .info-right li:nth-of-type(1)::after {
-  z-index: 102;
-  content: "05";
-  position: absolute;
-  top: 50%;
-  left: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  font-size: 18px;
-  background-color: #fff;
+.home-about > .details .info-right a:nth-of-type(4) {
+  background-image: url("../images/no08.png");
 }
-.home-about > .details .info-right li:nth-of-type(2)::after {
-  z-index: 102;
-  content: "06";
-  position: absolute;
-  top: 50%;
-  left: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  font-size: 18px;
-  background-color: #fff;
-}
-.home-about > .details .info-right li:nth-of-type(3)::after {
-  z-index: 102;
-  content: "07";
-  position: absolute;
-  top: 50%;
-  left: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  font-size: 18px;
-  background-color: #fff;
-}
-.home-about > .details .info-right li:nth-of-type(4)::after {
-  z-index: 102;
-  content: "08";
-  position: absolute;
-  top: 50%;
-  left: calc((40px - 40px / 2) / 2);
-  width: calc(40px / 2);
-  height: calc(40px / 2);
-  text-align: center;
-  line-height: calc(40px / 2);
-  transform: translateY(-50%);
-  font-size: 18px;
-  background-color: #fff;
-}
-.home-about > .details .info-right li::before {
-  z-index: 101;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(-40px * 0.207);
-  width: calc(40px * 1.414);
-  height: 1px;
-  background-color: #333;
-  transform: translateY(-50%) rotate(-45deg);
-  transform-origin: center;
+.home-about > .details .info-right a strong {
+  text-align: left;
 }
 
 /*美珀产品中心*/
@@ -1230,8 +1242,8 @@ section > .heading .en {
   display: block;
   float: left;
   position: relative;
-  padding-right: 42px;
-  padding-left: 42px;
+  padding-right: 40px;
+  padding-left: 40px;
   font-size: 14px;
   color: #fff;
 }
@@ -1254,18 +1266,14 @@ section > .heading .en {
   margin-left: auto;
   width: 1200px;
   margin-top: 50px;
-  display: inline-block;
   font-size: 0;
 }
 .footer .intro .footer-logo {
   display: inline-block;
   vertical-align: middle;
-  width: 220px;
-  text-align: left;
+  width: 192px;
+  height: 60px;
   font-size: 14px;
-}
-.footer .intro .footer-logo img {
-  display: inline-block;
 }
 .footer .intro .other-info {
   display: inline-block;
@@ -1273,9 +1281,14 @@ section > .heading .en {
   font-size: 14px;
   line-height: 1.5;
   width: calc(100% - 220px - 200px);
+  padding-left: 150px;
+  text-align: left;
+}
+.footer .intro .other-info > div {
+  line-height: 1.5em;
 }
 .footer .intro .other-info > div:not(:last-of-type) {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .footer .intro .other-info .contact strong {
   font-weight: normal;
