@@ -40,6 +40,17 @@
                     <strong class="cn">联系我们</strong>
                     <strong class="en">Contact Us</strong>
                 </h3>
+                <div class="body">
+                    <div id="baidumap" class="baidumap"></div>
+                    <div class="details">
+                        <img src="images/contact-us.png" alt="联系我们">
+                        <span>服务热线：<a href="tel:4006570567" title="给我们打电话">400-657-0567</a></span>
+                        <span>传真号码：400-657-0567</span>
+                        <span>服务QQ：<a href="tencent://Message/?Uin=1806614458&websiteName=q-zone.qq.com&Menu=yes" title="通过QQ联系我们">1806614458</a></span>
+                        <span>电子邮件：<a href="meilto:abcd@qq.com" title="通过邮件联系我们">abcd@qq.com</a></span>
+                        <span>公司地址：四川成都XXX</span>
+                    </div>
+                </div>
             </section>
         </main>
         <footer id="footer" class="footer" role="contentinfo">
@@ -82,6 +93,20 @@
         </footer>
         <script src="scripts/jquery-3.3.1.min.js"></script>
         <script src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0SZp25hIe6BnyizNfWGVOvVQ"></script>
         <script src="scripts/meipo.js"></script>
+        <script type="text/javascript">
+            // 百度地图API功能
+            var baidumap = new BMap.Map("baidumap");    // 创建Map实例
+//            baidumap.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+            //添加地图类型控件
+            baidumap.addControl(new BMap.MapTypeControl({
+                mapTypes:[
+                    BMAP_NORMAL_MAP,
+                    BMAP_HYBRID_MAP
+                ]}));
+            baidumap.centerAndZoom("成都",15);
+            baidumap.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        </script>
     </body>
 </html>

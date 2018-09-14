@@ -922,3 +922,35 @@ body {
     }
   }
 }
+.contact-us {
+  .body {
+    @include center-content(1200px);
+    @extend %clearfix;
+  }
+  .baidumap {
+    float: left;
+    width: 840px;
+    height: 300px;
+  }
+  .details {
+    float: right;
+    img {
+      display: block;
+      width: 320px;
+      height: 120px;
+      margin-bottom: 24px;
+    }
+    span {
+      display: block;
+      font-size: 14px;
+      color: $text-color;
+      line-height: 1.6em;
+      a {
+        color: inherit;
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .news .list:before, .news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .news .list:before, .news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .news .list:after, .news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .news .list:after, .news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after {
   content: "";
   display: table;
   clear: both;
@@ -1424,6 +1424,39 @@ body .main {
   text-transform: capitalize;
   font-size: 14px;
   line-height: 1;
+}
+
+.contact-us .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+.contact-us .baidumap {
+  float: left;
+  width: 840px;
+  height: 300px;
+}
+.contact-us .details {
+  float: right;
+}
+.contact-us .details img {
+  display: block;
+  width: 320px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+.contact-us .details span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6em;
+}
+.contact-us .details span a {
+  color: inherit;
+}
+.contact-us .details span:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=meipo.css.map */
