@@ -324,11 +324,13 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .news .list:before, .news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .product-center .product:before, .product-center .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before, .news .list:before,
+.trends .list:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .news .list:after, .news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .product-center .product:after, .product-center .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after, .news .list:after,
+.trends .list:after {
   content: "";
   display: table;
   clear: both;
@@ -357,7 +359,8 @@ label:hover {
   opacity: .8;
 }
 
-.home-about > .details .info a strong, .product-center .product .product-list li:first-of-type strong, .product-center .product .product-list li:first-of-type p, .product-center .product .product-list li:not(:first-of-type) strong, .product-center .product .product-list li a .info strong, .join-support .list li, .news .list .importance-news .heading, .news .list .importance-news p, .news .list .normal-news li .heading {
+.home-about > .details .info a strong, .product-center .product .product-list li:first-of-type strong, .product-center .product .product-list li:first-of-type p, .product-center .product .product-list li:not(:first-of-type) strong, .product-center .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news .list li a,
+.trends .list li a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -614,7 +617,6 @@ body .main {
   margin-left: auto;
   width: 1200px;
   margin-bottom: 40px;
-  color: #fff;
 }
 .home-main section > .heading strong {
   color: inherit;
@@ -1142,29 +1144,29 @@ body .main {
 }
 
 /*新闻咨询*/
-.news {
+.home-news {
   background-color: #fff;
 }
-.news .heading {
+.home-news .heading {
   color: #333;
 }
-.news .list {
+.home-news .list {
   display: block;
   margin-right: auto;
   margin-left: auto;
   width: 1200px;
 }
-.news .list .importance-news {
+.home-news .list .importance-news {
   float: left;
   width: 340px;
 }
-.news .list .importance-news img {
+.home-news .list .importance-news img {
   display: block;
   width: 340px;
   height: 200px;
   margin-bottom: 16px;
 }
-.news .list .importance-news .heading {
+.home-news .list .importance-news .heading {
   display: block;
   font-size: 16px;
   line-height: 1.6;
@@ -1172,34 +1174,34 @@ body .main {
   margin-bottom: 6px;
   color: #333;
 }
-.news .list .importance-news .heading:hover {
+.home-news .list .importance-news .heading:hover {
   color: #a57e60;
 }
-.news .list .importance-news p {
+.home-news .list .importance-news p {
   font-size: 14px;
   color: #333;
 }
-.news .list .normal-news {
+.home-news .list .normal-news {
   float: right;
   width: calc(100% - 340px - 40px);
 }
-.news .list .normal-news li {
+.home-news .list .normal-news li {
   width: calc(50% - 20px);
   float: left;
 }
-.news .list .normal-news li:nth-of-type(2n + 1) {
+.home-news .list .normal-news li:nth-of-type(2n + 1) {
   margin-right: 40px;
 }
-.news .list .normal-news li:not(:first-of-type):not(:nth-of-type(2)) {
+.home-news .list .normal-news li:not(:first-of-type):not(:nth-of-type(2)) {
   margin-top: 30px;
 }
-.news .list .normal-news li time {
+.home-news .list .normal-news li time {
   display: block;
   font-size: 16px;
   line-height: 1.2;
   margin-bottom: 10px;
 }
-.news .list .normal-news li .heading {
+.home-news .list .normal-news li .heading {
   display: block;
   font-weight: 500;
   font-size: 16px;
@@ -1209,10 +1211,10 @@ body .main {
   padding-bottom: 6px;
   line-height: 1.7;
 }
-.news .list .normal-news li .heading:hover {
+.home-news .list .normal-news li .heading:hover {
   color: #a57e60;
 }
-.news .list .normal-news li p {
+.home-news .list .normal-news li p {
   font-size: 14px;
   color: #666;
   line-height: 1.6em;
@@ -1225,7 +1227,7 @@ body .main {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-.news .more {
+.home-news .more {
   display: table;
   margin: 40px auto 0;
   padding: 10px 23px;
@@ -1235,7 +1237,7 @@ body .main {
   color: #666;
   text-align: center;
 }
-.news .more:hover {
+.home-news .more:hover {
   color: #a57e60;
 }
 
@@ -1267,7 +1269,7 @@ body .main {
   font-size: 14px;
   color: #fff;
 }
-.footer .footer-nav a:hover {
+.footer .footer-nav a:hover, .footer .footer-nav a.active {
   color: #a57e60;
 }
 .footer .footer-nav a:not(:last-of-type)::after {
@@ -1425,6 +1427,25 @@ body .main {
   font-size: 14px;
   line-height: 1;
 }
+.main:not(.home-main) .tab {
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 0;
+}
+.main:not(.home-main) .tab a {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 16px;
+  color: #151515;
+}
+.main:not(.home-main) .tab a:hover, .main:not(.home-main) .tab a.active {
+  color: #a57e60;
+}
 
 .contact-us .body {
   display: block;
@@ -1457,6 +1478,67 @@ body .main {
 }
 .contact-us .details span:not(:last-of-type) {
   margin-bottom: 10px;
+}
+
+.news .list,
+.trends .list {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+.news .list li,
+.trends .list li {
+  float: left;
+  width: calc(33.33333333% - 40px);
+  margin-bottom: 60px;
+}
+.news .list li:nth-of-type(3n + 2),
+.trends .list li:nth-of-type(3n + 2) {
+  margin-right: 60px;
+  margin-left: 60px;
+}
+.news .list li time,
+.trends .list li time {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 2px;
+}
+.news .list li a,
+.trends .list li a {
+  display: block;
+  color: #000;
+  font-size: 16px;
+  line-height: 2;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 15px;
+}
+.news .list li a:hover,
+.trends .list li a:hover {
+  color: #a57e60;
+}
+.news .list li p,
+.trends .list li p {
+  /*多行文本省略*/
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5em;
+  max-height: 3em;
+}
+
+.pagination-wrapper {
+  text-align: center;
+}
+
+.main:not(.home-main) section + section {
+  padding-top: 0;
 }
 
 /*# sourceMappingURL=meipo.css.map */

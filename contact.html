@@ -56,14 +56,14 @@
         <footer id="footer" class="footer" role="contentinfo">
             <nav class="footer-nav">
                 <!-- 当前菜单时，a 添加 active 类 -->
-                <a href="#" title="首页" class="active">首页</a>
+                <a href="#" title="首页">首页</a>
                 <a href="#" title="关于美珀">关于美珀</a>
                 <a href="#" title="产品中心">产品中心</a>
                 <a href="#" title="案例展示">案例展示</a>
                 <a href="#" title="招商加盟">招商加盟</a>
                 <a href="#" title="体验店风采">体验店风采</a>
                 <a href="#" title="新闻动态">新闻动态</a>
-                <a href="#" title="联系我们">联系我们</a>
+                <a href="#" title="联系我们" class="active">联系我们</a>
             </nav>
             <div class="intro">
                 <img src="images/footer-logo.png" alt="美珀门窗logo" class="footer-logo">
@@ -77,8 +77,8 @@
                 </div>
                 <div class="contact-way">
                     <a href="javascript: void(0)" title="扫描微信二维码" class="wechat">
-                        <i class="iconfont icon-wechat" id="wechatIcon"></i>
-                        <div class="qrcode" id="qrcode">
+                        <i class="iconfont icon-wechat js-wechat-icon"></i>
+                        <div class="qrcode js-qrcode">
                             <img src="images/weixin-code.jpg" alt="微信二维码">
                         </div>
                     </a>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <!--回到顶部-->
-            <a id="toTop" class="to-top" href="javascript:void(0);" title="回到顶部">
+            <a class="to-top js-to-top" href="javascript:void(0);" title="回到顶部">
                 <i class="iconfont icon-up"></i>
             </a>
         </footer>
