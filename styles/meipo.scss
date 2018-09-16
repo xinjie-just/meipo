@@ -1024,6 +1024,7 @@ body {
     }
   }
 }
+
 /*===体验店风采===*/
 .experience-store {
   .list {
@@ -1069,6 +1070,74 @@ body {
         @extend %ellipsis;
         height: 50px;
         line-height: 50px;
+      }
+    }
+  }
+}
+
+/*===案例中心===*/
+.case {
+  .list {
+    @include center-content(1200px);
+    @extend %clearfix;
+    li {
+      float: left;
+      width: calc(33.33333333% - 16px);
+      margin-bottom: 40px;
+      &:nth-of-type(3n + 2) {
+        margin-right: 24px;
+        margin-left: 24px;
+      }
+      a {
+        @extend %ellipsis;
+        display: block;
+        color: $text-color;
+        font-size: 16px;
+        line-height: 1.3em;
+        @include transition(0.6s);
+        &:hover {
+          color: $main-color;
+          border-color: $main-color;
+          img {
+            @include scale(1.1, 1.1);
+          }
+          .series {
+            color: $main-color;
+          }
+        }
+      }
+      figure {
+        width: 100%;
+        height: 280px;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          @include transition(0.6s);
+        }
+      }
+      .case-info {
+        margin-top: 1em;
+        width: 100%;
+        white-space: normal;
+        .tag {
+          @include transition(0.6s);
+          &:not(:first-child) {
+            margin-left: 15px;
+            padding-left: 16px;
+            border-left: 1px solid;
+            font-weight: 500;
+          }
+        }
+      }
+      .series {
+        @extend %ellipsis;
+        display: block;
+        font-size: 14px;
+        margin-top: .8em;
+        color: #666;
+        font-weight: 400;
+        @include transition(0.6s);
       }
     }
   }
