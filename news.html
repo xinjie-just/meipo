@@ -39,7 +39,7 @@
                 <a href="#news" title="美珀新闻">美珀新闻</a>
                 <a href="#trends" title="行业动态">行业动态</a>
             </nav>
-            <section id="news" class="news">
+            <section class="news-classify news">
                 <h3 class="heading">
                     <strong class="cn">美珀新闻</strong>
                     <strong class="en">Meablo News</strong>
@@ -112,7 +112,7 @@
                     </ul>
                 </div>
             </section>
-            <section id="trends" class="trends">
+            <section class="news-classify trends">
                 <h3 class="heading">
                     <strong class="cn">行业动态</strong>
                     <strong class="en">Industry News</strong>
@@ -228,18 +228,5 @@
         <script src="scripts/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0SZp25hIe6BnyizNfWGVOvVQ"></script>
         <script src="scripts/meipo.js"></script>
-        <script type="text/javascript">
-            // 百度地图API功能
-            var baidumap = new BMap.Map("baidumap");    // 创建Map实例
-//            baidumap.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-            //添加地图类型控件
-            baidumap.addControl(new BMap.MapTypeControl({
-                mapTypes:[
-                    BMAP_NORMAL_MAP,
-                    BMAP_HYBRID_MAP
-                ]}));
-            baidumap.centerAndZoom("成都",15);
-            baidumap.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-        </script>
     </body>
 </html>
