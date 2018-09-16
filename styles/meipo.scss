@@ -1196,3 +1196,59 @@ body {
     }
   }
 }
+
+/*===关于美珀===*/
+.about-meablo {
+  .intro {
+    @include center-content(1200px);
+    $width: 530px;
+    $height: 356px;
+    padding: 0 20px 20px 20px;
+    height: $height + 40px;
+    margin-bottom: 100px;
+    @extend %clearfix;
+    figure {
+      float: left;
+      position: relative;
+      width: $width;
+      height: $height;
+      overflow: visible;
+      > img {
+        display: block;
+        width: $width;
+        height: $height;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        background-color: #d9dbe0;
+      }
+      &::before {
+        width: 20px;
+        height: 270px;
+      }
+      &::after {
+        width: 420px;
+        height: 20px;
+      }
+    }
+    .text {
+      float: right;
+      width: calc(100% - #{$width});
+      padding-left: 60px;
+      p {
+        font-size: 14px;
+        color: $text-color;
+        line-height: 2;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #cbcbcc;
+        }
+      }
+    }
+  }
+}

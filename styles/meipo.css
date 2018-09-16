@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after {
   content: "";
   display: table;
   clear: both;
@@ -1696,6 +1696,59 @@ body .main {
   padding-right: 1em;
   padding-left: 1em;
   transition: all 0.6s linear 0s;
+}
+
+/*===关于美珀===*/
+.about-meablo .intro {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  padding: 0 20px 20px 20px;
+  height: 396px;
+  margin-bottom: 100px;
+}
+.about-meablo .intro figure {
+  float: left;
+  position: relative;
+  width: 530px;
+  height: 356px;
+  overflow: visible;
+}
+.about-meablo .intro figure > img {
+  display: block;
+  width: 530px;
+  height: 356px;
+}
+.about-meablo .intro figure::before, .about-meablo .intro figure::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background-color: #d9dbe0;
+}
+.about-meablo .intro figure::before {
+  width: 20px;
+  height: 270px;
+}
+.about-meablo .intro figure::after {
+  width: 420px;
+  height: 20px;
+}
+.about-meablo .intro .text {
+  float: right;
+  width: calc(100% - 530px);
+  padding-left: 60px;
+}
+.about-meablo .intro .text p {
+  font-size: 14px;
+  color: #333;
+  line-height: 2;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.about-meablo .intro .text p:not(:last-of-type) {
+  border-bottom: 1px solid #cbcbcc;
 }
 
 /*# sourceMappingURL=meipo.css.map */
