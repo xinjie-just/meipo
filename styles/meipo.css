@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .enterprise-culture .body:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .enterprise-culture .body:after {
   content: "";
   display: table;
   clear: both;
@@ -504,6 +504,23 @@ body .main {
 .header {
   z-index: 1000;
   position: relative;
+  /*&:not(.home-header) {
+    .heading-wrapper {
+      background-color: #050c23;
+      &:hover,
+      &.scroll {
+        background: rgba(255, 255, 255, .9);
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
+        color: #000;
+        .header-logo {
+          background-image: url("../images/logo-black.png");
+        }
+        .phone {
+          color: #333;
+        }
+      }
+    }
+  }*/
 }
 .header .heading-wrapper {
   z-index: 1001;
@@ -1706,7 +1723,6 @@ body .main {
   width: 1200px;
   padding: 0 20px 20px 20px;
   height: 396px;
-  margin-bottom: 100px;
 }
 .about-meablo .intro figure {
   float: left;
@@ -1744,11 +1760,98 @@ body .main {
   font-size: 14px;
   color: #333;
   line-height: 2;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
 }
 .about-meablo .intro .text p:not(:last-of-type) {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #cbcbcc;
+}
+
+.brand-story {
+  background-color: #fff;
+}
+.brand-story .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+.brand-story .text {
+  margin-bottom: 34px;
+}
+.brand-story .text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 2;
+  text-align: center;
+}
+.brand-story .text p:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.brand-story .intro > div {
+  width: 50%;
+  text-align: center;
+  float: left;
+}
+.brand-story .intro > div .subhead {
+  margin-bottom: 15px;
+}
+.brand-story .intro > div .subhead strong {
+  color: inherit;
+  display: block;
+  text-align: center;
+}
+.brand-story .intro > div .subhead .cn {
+  font-family: "webfont", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.brand-story .intro > div .subhead .en {
+  font-family: "webfont", Arial, sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.brand-story .intro > div img {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.enterprise-culture .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  margin-top: 60px;
+}
+.enterprise-culture .body .text {
+  float: left;
+  width: 440px;
+  min-height: 60px;
+  padding-top: 20px;
+  padding-left: 60px;
+  background: url("../images/comma.png") no-repeat top left;
+}
+.enterprise-culture .body .text li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #283356;
+}
+.enterprise-culture .body .text li:not(:last-of-type) {
+  margin-bottom: .8em;
+}
+.enterprise-culture .body .text li span {
+  color: #151515;
+}
+.enterprise-culture .body > img {
+  float: right;
+  display: block;
+  width: 620px;
+  height: 280px;
 }
 
 /*# sourceMappingURL=meipo.css.map */
