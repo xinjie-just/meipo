@@ -752,7 +752,7 @@ body {
 /*底部*/
 .footer {
   @include wrapper-padding(60px, 60px);
-  background: rgba(42, 42, 42, 1) url("../images/copyright-bg.png") no-repeat center right 120px;
+  background: #050c23 url("../images/copyright-bg.png") no-repeat center right 120px;
   color: #fff;
   text-align: center;
   .footer-nav {
@@ -820,10 +820,13 @@ body {
         strong {
           font-weight: normal;
           &:not(:last-of-type) {
-            margin-right: 10px;
+            margin-right: 14px;
           }
           a {
             color: inherit;
+            &:not(:last-of-type) {
+              margin-right: 10px;
+            }
           }
         }
       }

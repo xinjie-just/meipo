@@ -1259,7 +1259,7 @@ body .main {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background: #2a2a2a url("../images/copyright-bg.png") no-repeat center right 120px;
+  background: #050c23 url("../images/copyright-bg.png") no-repeat center right 120px;
   color: #fff;
   text-align: center;
 }
@@ -1330,10 +1330,13 @@ body .main {
   font-weight: normal;
 }
 .footer .intro .other-info .contact strong:not(:last-of-type) {
-  margin-right: 10px;
+  margin-right: 14px;
 }
 .footer .intro .other-info .contact strong a {
   color: inherit;
+}
+.footer .intro .other-info .contact strong a:not(:last-of-type) {
+  margin-right: 10px;
 }
 .footer .intro .contact-way {
   width: 200px;
