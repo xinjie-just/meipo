@@ -901,6 +901,10 @@ body {
     $color: #f5f5f5;
     background-color: $color;
     @include wrapper-padding(60px, 60px);
+    display: none;
+    &.active {
+      display: block;
+    }
     > .heading {
       position: relative;
       display: table;
@@ -960,6 +964,9 @@ body {
         color: $main-color;
       }
     }
+  }
+  .about-type {
+    @include wrapper-padding(60px, 60px);
   }
 }
 .contact-us {

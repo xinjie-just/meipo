@@ -1404,6 +1404,10 @@ body .main {
   background-color: #f5f5f5;
   padding-top: 60px;
   padding-bottom: 60px;
+  display: none;
+}
+.main:not(.home-main) section.active {
+  display: block;
 }
 .main:not(.home-main) section > .heading {
   position: relative;
@@ -1462,6 +1466,10 @@ body .main {
 }
 .main:not(.home-main) .tab a:hover, .main:not(.home-main) .tab a.active {
   color: #a57e60;
+}
+.main:not(.home-main) .about-type {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .contact-us .body {

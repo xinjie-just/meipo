@@ -50,6 +50,13 @@ $(".js-tab").find("a").click(function () {
     $(this).addClass("active");
     $(this).siblings("a").removeClass("active");
 });
+$(".js-switch-tab").find("a").click(function () {
+    var linkIndex = $(this).index();
+    var $section = $(this).parents("#main").find("section");
+    $($section[linkIndex]).addClass("active");
+    $($section[linkIndex]).siblings("section").removeClass("active");
+});
+
 // 当前页面地址与路由匹配情况
 function matchUrl() {
     var link =  $(".js-tab").find("a");
