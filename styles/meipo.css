@@ -508,23 +508,6 @@ body .main {
 .header {
   z-index: 1000;
   position: relative;
-  /*&:not(.home-header) {
-    .heading-wrapper {
-      background-color: $backgroung-color;
-      &:hover,
-      &.scroll {
-        background: rgba(255, 255, 255, .9);
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
-        color: #000;
-        .header-logo {
-          background-image: url("../images/logo-black.png");
-        }
-        .phone {
-          color: #333;
-        }
-      }
-    }
-  }*/
 }
 .header .heading-wrapper {
   z-index: 1001;
@@ -532,20 +515,35 @@ body .main {
   top: 0;
   width: 100%;
   height: 120px;
-  background-color: transparent;
   transition: all .6s ease 0s;
   color: #fff;
 }
-.header .heading-wrapper:hover, .header .heading-wrapper.scroll {
+.header.home-header .heading-wrapper {
+  background-color: transparent;
+}
+.header.home-header .heading-wrapper:hover, .header.home-header .heading-wrapper.scroll {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
   color: #000;
 }
-.header .heading-wrapper:hover .header-logo, .header .heading-wrapper.scroll .header-logo {
+.header.home-header .heading-wrapper:hover .header-logo, .header.home-header .heading-wrapper.scroll .header-logo {
   background-image: url("../images/logo-black.png");
 }
-.header .heading-wrapper:hover .phone, .header .heading-wrapper.scroll .phone {
+.header.home-header .heading-wrapper:hover .phone, .header.home-header .heading-wrapper.scroll .phone {
   color: #333;
+}
+.header:not(.home-header) .heading-wrapper {
+  background-color: #050c23;
+}
+.header:not(.home-header) .banner {
+  margin-top: 120px;
+}
+.header:not(.home-header) .banner img {
+  display: block;
+  max-width: 100%;
+  height: 240px;
+  object-fit: cover;
+  overflow: hidden;
 }
 .header .heading {
   display: block;
@@ -596,14 +594,6 @@ body .main {
 }
 .header .heading .header-nav a:hover, .header .heading .header-nav a.active {
   color: #a57e60;
-}
-
-.banner img {
-  display: block;
-  max-width: 100%;
-  height: 240px;
-  object-fit: cover;
-  overflow: hidden;
 }
 
 .banner-carousel {
@@ -1441,11 +1431,17 @@ body .main {
 /*===联系我们===*/
 .main:not(.home-main) .tab {
   background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 60px;
   line-height: 60px;
   text-align: center;
   font-size: 0;
+}
+.main:not(.home-main) .tab.tab-fixed {
+  z-index: 1001;
+  position: fixed;
+  top: 120px;
 }
 .main:not(.home-main) .tab a {
   display: inline-block;

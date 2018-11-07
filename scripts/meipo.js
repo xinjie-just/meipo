@@ -6,12 +6,14 @@ $(function () {
     matchUrl();
     changeHeader();
     toTopDisplay();
+    subMenuLocation();
 });
 
 /*回到顶部*/
 $(window).scroll(function() {
     toTopDisplay();
     changeHeader();
+    subMenuLocation();
 });
 $(".js-to-top").click(function () {
     $("html, body").animate({scrollTop: 0}, 600); /* 持续时间为 600ms */
@@ -24,6 +26,15 @@ function toTopDisplay() {
         $(".js-to-top").fadeIn(); /* 当滑动到不小于 200px 时，回到顶部图标显示 */
     }else {
         $(".js-to-top").fadeOut(); /* 当滑动到小于(页面被卷去的高度)200px 时，回到顶部图标隐藏 */
+    }
+}
+
+// 二级菜单的定位
+function subMenuLocation() {
+    if ($(window).scrollTop() >= 240) {  // 240px 是内页banner部分的高度
+        $(".js-tab").addClass("tab-fixed");
+    } else {
+        $(".js-tab").removeClass("tab-fixed");
     }
 }
 
