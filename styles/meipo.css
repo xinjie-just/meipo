@@ -492,18 +492,17 @@ label:hover {
 }
 
 /*===首页===*/
-body {
+/*body {
   display: -ms-flex;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
-}
-body .main {
-  -ms-flex: 1;
-  flex: 1;
-}
-
+  .main {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}*/
 /*头部，banner*/
 .header {
   z-index: 1000;
