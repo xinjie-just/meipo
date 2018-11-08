@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before, #marketProspect .body:before, #marketProspect .body .market-prospect-list:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after, #marketProspect .body:after, #marketProspect .body .market-prospect-list:after {
   content: "";
   display: table;
   clear: both;
@@ -1470,6 +1470,7 @@ label:hover {
   display: block;
 }
 .main:not(.home-main) section > .heading {
+  z-index: 100;
   position: relative;
   display: table;
   margin: 0 auto 40px;
@@ -2270,6 +2271,198 @@ label:hover {
   font-size: 14px;
   line-height: 1.5;
   margin-top: 10px;
+}
+
+/*===招商加盟===*/
+/*市场前景*/
+#marketProspect {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+#marketProspect .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1300px;
+}
+#marketProspect .body img {
+  display: block;
+  float: left;
+  width: 320px;
+  height: 410px;
+}
+#marketProspect .body .market-prospect-list {
+  width: calc(100% - 320px - 50px);
+  float: right;
+}
+#marketProspect .body .market-prospect-list li {
+  float: left;
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+#marketProspect .body .market-prospect-list li:nth-of-type(2n + 1) {
+  margin-right: 40px;
+}
+#marketProspect .body .market-prospect-list li h4 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a122e;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+#marketProspect .body .market-prospect-list li h4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50%) rotate(45deg);
+  background-image: linear-gradient(-135deg, #6c9bd2 0%, #0a122e 100%);
+}
+#marketProspect .body .market-prospect-list li p {
+  /*多行文本省略*/
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-height: 30px;
+  max-height: calc(30px * 4);
+  font-size: 14px;
+  color: #333;
+}
+
+/*加盟流程*/
+#joinProcessInvestmentGuide {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+#joinProcessInvestmentGuide::before, #joinProcessInvestmentGuide::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  transform: translateY(-50%) rotate(10deg);
+  transform-origin: right center;
+  background-color: #efece9;
+}
+#joinProcessInvestmentGuide::before {
+  transform: translateY(-50%) rotate(17deg);
+}
+#joinProcessInvestmentGuide::after {
+  transform: translateY(-50%) rotate(-17deg);
+}
+#joinProcessInvestmentGuide .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+#joinProcessInvestmentGuide .body li {
+  z-index: 11;
+  position: relative;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 35px;
+  padding-left: 35px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
+}
+#joinProcessInvestmentGuide .body li:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+#joinProcessInvestmentGuide .body li:not(:last-of-type)::before {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: #999;
+}
+#joinProcessInvestmentGuide .body li:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+}
+#joinProcessInvestmentGuide .body li i {
+  font-size: 1.3em;
+  color: #a57e60;
+  margin-right: 10px;
+}
+#joinProcessInvestmentGuide .join-us {
+  z-index: 11;
+  position: relative;
+  display: table;
+  margin: 30px auto 0;
+  padding: 10px 220px;
+  color: #333;
+  font-size: 14px;
+}
+#joinProcessInvestmentGuide .join-us::before, #joinProcessInvestmentGuide .join-us::after {
+  z-index: 100;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 190px;
+  height: 1px;
+  background-color: #666;
+}
+#joinProcessInvestmentGuide .join-us::before {
+  left: 0;
+}
+#joinProcessInvestmentGuide .join-us::after {
+  right: 0;
+}
+#joinProcessInvestmentGuide .join-us .heading {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+  margin-bottom: 6px;
+}
+#joinProcessInvestmentGuide .join-us .heading::before, #joinProcessInvestmentGuide .join-us .heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #666;
+  transform: translateY(-50%) rotate(45deg);
+}
+#joinProcessInvestmentGuide .join-us .heading::before {
+  left: 190px;
+}
+#joinProcessInvestmentGuide .join-us .heading::after {
+  right: 190px;
+}
+#joinProcessInvestmentGuide .join-us .phone {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #33436A;
 }
 
 /*# sourceMappingURL=meipo.css.map */
