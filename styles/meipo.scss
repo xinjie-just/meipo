@@ -1825,8 +1825,6 @@
     }
   }
 }
-
-
 /*加盟流程*/
 #joinProcessInvestmentGuide {
   @include wrapper-padding(60px, 80px);
@@ -1956,6 +1954,269 @@
       font-size: 18px;
       font-weight: 600;
       color: #33436A;
+    }
+  }
+}
+/*加盟优势*/
+#advantageInverstmentGuide {
+  background-color: #fff;
+  @include wrapper-padding(60px, 60px);
+  .heading {
+    &::after {
+      outline-color: #fff;
+    }
+  }
+  .body {
+    position: relative;
+    width: 987px;
+    height: 420px;
+    background: url("../images/advantage-inverstment-guide.png") center center / 987px no-repeat;
+    padding-left: 430px;
+    margin-right: auto;
+    margin-left: auto;
+    .advantage-inverstment-list {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px 20px 20px 0;
+      max-height: 380px; // 父元素的高度减去 40px
+      overflow: hidden;
+      li {
+        $liLen: 9;  // 最大支持9个，但并不代表可以全部显示完
+        position: relative;
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.5;
+        padding-left: 100px;
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        &:nth-of-type(2n + 1) {
+          margin-left: 0;
+        }
+        &:nth-of-type(2n + 2) {
+          margin-left: 50px;
+        }
+        &::before {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #e5c27b;
+          font-size: 2em;
+          font-weight: 600;
+          font-style: italic;
+        }
+        @for $index from 1 through $liLen {
+          &:nth-of-type(#{$index}) {
+            &::before {
+              content: "0#{$index}";
+              left: 0;
+            }
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 42px;
+          width: 40px;
+          height: 1px;
+          border-top: 1px dashed #e5c27b;
+        }
+      }
+    }
+  }
+}
+/*加盟条件*/
+#requirementInvestmentGuide {
+  @include wrapper-padding(60px, 60px);
+  background-color: #f5f5f5;
+  .body {
+    @include center-content(1030px);
+    li {
+      z-index: 10;
+      //position: relative;
+      //min-height: 180px;
+      @extend %clearfix;
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
+      &::before {
+        //z-index: 11;
+        display: block;
+        content: "";
+        position: absolute;
+      }
+      img {
+        //z-index: 20;  // 比父元素的 before 层级大
+        //position: absolute;
+        //top: 0;
+        display: block;
+        width: 400px;
+        height: 180px;
+      }
+      .text {
+        //z-index: 20;  // 比父元素的 before 层级大
+        //position: absolute;
+        //top: 0;
+        display: block;
+        min-height: 180px;
+        width: calc(100% - 400px - 30px);
+        dt {
+          display: block;
+          font-size: 18px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 23px;
+        }
+        dd {
+          display: block;
+          font-size: 14px;
+          font-weight: normal;
+          color: #333;
+          &:only-of-type {
+            line-height: 2;
+          }
+          & + dd {
+            line-height: 1.5;
+            margin-top: 10px;
+          }
+        }
+      }
+      &:nth-of-type(2n + 1) {
+        &::before {
+          width: 150px;
+          height: 150px;
+          background-image: linear-gradient(to right, #dbdbdb, #f0f0f0);
+          top: 60px;
+          left: 360px;
+        }
+        img {
+          //left: 0;
+          float: left;
+        }
+        .text {
+          float: right;
+          //right: 0;
+        }
+      }
+      &:nth-of-type(2n + 2) {
+        &::before {
+          width: 150px;
+          height: 150px;
+          background-image: linear-gradient(to right, #f0f0f0, #dbdbdb);
+          top: 60px;
+          right: 360px;
+        }
+        img {
+          float: right;
+          //right: 0;
+        }
+        .text {
+          float: left;
+          //left: 0;
+        }
+      }
+      &:last-of-type {
+        &::before {
+          top: -32px;
+        }
+      }
+    }
+  }
+}
+/*加盟支持*/
+#commercialSupport {
+  @include wrapper-padding(60px, 60px);
+  background-color: #fff;
+  .heading {
+    &::after {
+      outline-color: #fff;
+    }
+  }
+  .body {
+    @include center-content(1200px);
+    @extend %clearfix;
+    img {
+      display: block;
+      float: left;
+      width: 300px;
+      height: 709px;
+    }
+    ul {
+      width: calc(100% - 72px - 300px);
+      float: right;
+      li {
+        $dlLen: 20;// dl 的个数，最多支持 20
+        @extend %clearfix;
+        width: calc(50% - 30px);
+        float: left;
+        margin-bottom: 30px;
+        &:nth-of-type(2n + 1) {
+          margin-right: 60px;
+        }
+        i {
+          float: left;
+          display: block;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          color: #002d62;
+          font-size: 40px;
+          font-weight: 600;
+          //border: 2px solid currentColor;
+          //border-radius: 50%;
+        }
+        dl {
+          display: block;
+          float: right;
+          width: calc(100% - 40px - 20px);
+          color: #333;
+          dt {
+            @extend %ellipsis;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            font-size: 18px;
+            &::before {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              font-size: 1.2em;
+              font-weight: 600;
+              font-style: italic;
+            }
+          }
+          dd {
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            &:only-of-type {
+              line-height: 2;
+            }
+            & + dd {
+              line-height: 1.5;
+              margin-top: 10px;
+            }
+          }
+        }
+        @for $index from 1 through $dlLen {
+          &:nth-of-type(#{$index}) {
+            dl {
+              dt {
+                &::before {
+                  content: "#{$index}";
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

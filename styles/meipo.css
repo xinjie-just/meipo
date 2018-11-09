@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before, #marketProspect .body:before, #marketProspect .body .market-prospect-list:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before, #marketProspect .body:before, #marketProspect .body .market-prospect-list:before, #requirementInvestmentGuide .body li:before, #commercialSupport .body:before, #commercialSupport .body ul li:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after, #marketProspect .body:after, #marketProspect .body .market-prospect-list:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after, #marketProspect .body:after, #marketProspect .body .market-prospect-list:after, #requirementInvestmentGuide .body li:after, #commercialSupport .body:after, #commercialSupport .body ul li:after {
   content: "";
   display: table;
   clear: both;
@@ -357,7 +357,7 @@ label:hover {
   opacity: .8;
 }
 
-.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3 {
+.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3, #commercialSupport .body ul li dl dt {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2463,6 +2463,327 @@ label:hover {
   font-size: 18px;
   font-weight: 600;
   color: #33436A;
+}
+
+/*加盟优势*/
+#advantageInverstmentGuide {
+  background-color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#advantageInverstmentGuide .heading::after {
+  outline-color: #fff;
+}
+#advantageInverstmentGuide .body {
+  position: relative;
+  width: 987px;
+  height: 420px;
+  background: url("../images/advantage-inverstment-guide.png") center center/987px no-repeat;
+  padding-left: 430px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px 20px 20px 0;
+  max-height: 380px;
+  overflow: hidden;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li {
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  padding-left: 100px;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(2n + 1) {
+  margin-left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(2n + 2) {
+  margin-left: 50px;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e5c27b;
+  font-size: 2em;
+  font-weight: 600;
+  font-style: italic;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(1)::before {
+  content: "01";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(2)::before {
+  content: "02";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(3)::before {
+  content: "03";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(4)::before {
+  content: "04";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(5)::before {
+  content: "05";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(6)::before {
+  content: "06";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(7)::before {
+  content: "07";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(8)::before {
+  content: "08";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(9)::before {
+  content: "09";
+  left: 0;
+}
+#advantageInverstmentGuide .body .advantage-inverstment-list li::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  width: 40px;
+  height: 1px;
+  border-top: 1px dashed #e5c27b;
+}
+
+/*加盟条件*/
+#requirementInvestmentGuide {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f5f5f5;
+}
+#requirementInvestmentGuide .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1030px;
+}
+#requirementInvestmentGuide .body li {
+  z-index: 10;
+}
+#requirementInvestmentGuide .body li:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+#requirementInvestmentGuide .body li::before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+#requirementInvestmentGuide .body li img {
+  display: block;
+  width: 400px;
+  height: 180px;
+}
+#requirementInvestmentGuide .body li .text {
+  display: block;
+  min-height: 180px;
+  width: calc(100% - 400px - 30px);
+}
+#requirementInvestmentGuide .body li .text dt {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 23px;
+}
+#requirementInvestmentGuide .body li .text dd {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+#requirementInvestmentGuide .body li .text dd:only-of-type {
+  line-height: 2;
+}
+#requirementInvestmentGuide .body li .text dd + dd {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 1)::before {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(to right, #dbdbdb, #f0f0f0);
+  top: 60px;
+  left: 360px;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 1) img {
+  float: left;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 1) .text {
+  float: right;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 2)::before {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(to right, #f0f0f0, #dbdbdb);
+  top: 60px;
+  right: 360px;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 2) img {
+  float: right;
+}
+#requirementInvestmentGuide .body li:nth-of-type(2n + 2) .text {
+  float: left;
+}
+#requirementInvestmentGuide .body li:last-of-type::before {
+  top: -32px;
+}
+
+/*加盟支持*/
+#commercialSupport {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fff;
+}
+#commercialSupport .heading::after {
+  outline-color: #fff;
+}
+#commercialSupport .body {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+}
+#commercialSupport .body img {
+  display: block;
+  float: left;
+  width: 300px;
+  height: 709px;
+}
+#commercialSupport .body ul {
+  width: calc(100% - 72px - 300px);
+  float: right;
+}
+#commercialSupport .body ul li {
+  width: calc(50% - 30px);
+  float: left;
+  margin-bottom: 30px;
+}
+#commercialSupport .body ul li:nth-of-type(2n + 1) {
+  margin-right: 60px;
+}
+#commercialSupport .body ul li i {
+  float: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #002d62;
+  font-size: 40px;
+  font-weight: 600;
+}
+#commercialSupport .body ul li dl {
+  display: block;
+  float: right;
+  width: calc(100% - 40px - 20px);
+  color: #333;
+}
+#commercialSupport .body ul li dl dt {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+#commercialSupport .body ul li dl dt::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+}
+#commercialSupport .body ul li dl dd {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}
+#commercialSupport .body ul li dl dd:only-of-type {
+  line-height: 2;
+}
+#commercialSupport .body ul li dl dd + dd {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+#commercialSupport .body ul li:nth-of-type(1) dl dt::before {
+  content: "1";
+}
+#commercialSupport .body ul li:nth-of-type(2) dl dt::before {
+  content: "2";
+}
+#commercialSupport .body ul li:nth-of-type(3) dl dt::before {
+  content: "3";
+}
+#commercialSupport .body ul li:nth-of-type(4) dl dt::before {
+  content: "4";
+}
+#commercialSupport .body ul li:nth-of-type(5) dl dt::before {
+  content: "5";
+}
+#commercialSupport .body ul li:nth-of-type(6) dl dt::before {
+  content: "6";
+}
+#commercialSupport .body ul li:nth-of-type(7) dl dt::before {
+  content: "7";
+}
+#commercialSupport .body ul li:nth-of-type(8) dl dt::before {
+  content: "8";
+}
+#commercialSupport .body ul li:nth-of-type(9) dl dt::before {
+  content: "9";
+}
+#commercialSupport .body ul li:nth-of-type(10) dl dt::before {
+  content: "10";
+}
+#commercialSupport .body ul li:nth-of-type(11) dl dt::before {
+  content: "11";
+}
+#commercialSupport .body ul li:nth-of-type(12) dl dt::before {
+  content: "12";
+}
+#commercialSupport .body ul li:nth-of-type(13) dl dt::before {
+  content: "13";
+}
+#commercialSupport .body ul li:nth-of-type(14) dl dt::before {
+  content: "14";
+}
+#commercialSupport .body ul li:nth-of-type(15) dl dt::before {
+  content: "15";
+}
+#commercialSupport .body ul li:nth-of-type(16) dl dt::before {
+  content: "16";
+}
+#commercialSupport .body ul li:nth-of-type(17) dl dt::before {
+  content: "17";
+}
+#commercialSupport .body ul li:nth-of-type(18) dl dt::before {
+  content: "18";
+}
+#commercialSupport .body ul li:nth-of-type(19) dl dt::before {
+  content: "19";
+}
+#commercialSupport .body ul li:nth-of-type(20) dl dt::before {
+  content: "20";
 }
 
 /*# sourceMappingURL=meipo.css.map */
