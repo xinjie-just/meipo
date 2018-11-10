@@ -357,7 +357,7 @@ label:hover {
   opacity: .8;
 }
 
-.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3, #commercialSupport .body ul li dl dt, .case-details-content-wrapper h1 {
+.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3, #commercialSupport .body ul li dl dt, .case-details-content-wrapper h1, .experience-store--content-wrapper h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2999,6 +2999,230 @@ label:hover {
 .case-details-content-wrapper .content div > p,
 .case-details-content-wrapper .content div > div {
   margin-top: 10px;
+}
+
+/*===体验店详情===*/
+.experience-store-details-breadcrumbs {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  margin-top: 60px;
+}
+
+.experience-store--content-wrapper {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  /*.big-img {
+    display: block;
+    width: 900px;
+    height: 550px;
+    margin: 30px auto 0;
+    img {
+      display: none;
+      width: inherit;
+      height: inherit;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .experience-store-details-carousel {
+    @include center-content(900px);
+    margin-top: 30px;
+    .carousel-inner {
+      width: calc(100% - 120px);
+      height: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        display: block;
+        float: left;
+        width: 180px;
+        height: 140px;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+    .carousel-control {
+      text-shadow: none;
+      background: none;
+      opacity: 1;
+      width: 60px;
+      height: 140px;
+      line-height: 140px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      border-radius: 100%;
+      span {
+        color: inherit;
+        font-size: 36px;
+      }
+      &:hover {
+        color: $main-color;
+      }
+      &.left {
+        text-align: left;
+        background-image: none;
+      }
+      &.right {
+        text-align: right;
+        background-image: none;
+      }
+    }
+  }*/
+}
+.experience-store--content-wrapper h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #e5c27b;
+}
+.experience-store--content-wrapper .zoom {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.experience-store--content-wrapper .wrapper {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  margin-top: 30px;
+}
+.experience-store--content-wrapper .wrapper .content {
+  text-align: center;
+}
+.experience-store--content-wrapper .wrapper .content .view {
+  display: block;
+  width: 900px !important;
+  height: 550px !important;
+}
+.experience-store--content-wrapper .wrapper .content .view img {
+  display: block;
+  width: 900px !important;
+  height: 550px !important;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs {
+  width: 900px;
+  height: 140px;
+  position: relative;
+  margin: 20px 0;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-left-thumbs,
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-right-thumbs {
+  position: absolute;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition-duration: .5s;
+  text-shadow: none;
+  background: none;
+  opacity: 1;
+  width: 60px;
+  height: 140px;
+  line-height: 140px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-left-thumbs:hover,
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-right-thumbs:hover {
+  color: #a57e60;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-left-thumbs {
+  left: 0;
+  text-align: left;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .nav-right-thumbs {
+  right: 0;
+  text-align: right;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .pics-thumbs {
+  position: relative;
+  margin: 0 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition-duration: .8s;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .pics-thumbs img {
+  cursor: pointer;
+  width: 180px;
+  height: 140px;
+  transition-duration: .5s;
+}
+.experience-store--content-wrapper .wrapper .content .thumbs .pics-thumbs img:not(:last-of-type) {
+  margin-right: 20px;
+}
+.experience-store--content-wrapper .intro {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 2;
+}
+.experience-store--content-wrapper .intro img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto 0;
+}
+.experience-store--content-wrapper .intro img + img {
+  margin-top: 20px;
+}
+.experience-store--content-wrapper .intro img + p, .experience-store--content-wrapper .intro img + div {
+  margin-top: 15px;
+}
+.experience-store--content-wrapper .intro img + div div,
+.experience-store--content-wrapper .intro img + div p {
+  margin-top: 10px;
+}
+.experience-store--content-wrapper .intro p,
+.experience-store--content-wrapper .intro div {
+  line-height: 26px;
+  word-wrap: break-word;
+  margin-top: 15px;
+}
+.experience-store--content-wrapper .intro div > p,
+.experience-store--content-wrapper .intro div > div {
+  margin-top: 10px;
+}
+.experience-store--content-wrapper .contact {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 900px;
+  margin-top: 30px;
+  font-size: 0;
+}
+.experience-store--content-wrapper .contact span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.experience-store--content-wrapper .contact span:not(:first-of-type) {
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=meipo.css.map */

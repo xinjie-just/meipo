@@ -2490,3 +2490,216 @@
     }
   }
 }
+
+/*===体验店详情===*/
+.experience-store-details-breadcrumbs {
+  @include center-content(1200px);
+  margin-top: 60px;
+}
+.experience-store--content-wrapper {
+  @include center-content(1200px);
+  margin-top: 30px;
+  margin-bottom: 80px;
+  h1 {
+    @extend %ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-color;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #e5c27b;
+  }
+  /*.big-img {
+    display: block;
+    width: 900px;
+    height: 550px;
+    margin: 30px auto 0;
+    img {
+      display: none;
+      width: inherit;
+      height: inherit;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .experience-store-details-carousel {
+    @include center-content(900px);
+    margin-top: 30px;
+    .carousel-inner {
+      width: calc(100% - 120px);
+      height: 140px;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        display: block;
+        float: left;
+        width: 180px;
+        height: 140px;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+    .carousel-control {
+      text-shadow: none;
+      background: none;
+      opacity: 1;
+      width: 60px;
+      height: 140px;
+      line-height: 140px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      border-radius: 100%;
+      span {
+        color: inherit;
+        font-size: 36px;
+      }
+      &:hover {
+        color: $main-color;
+      }
+      &.left {
+        text-align: left;
+        background-image: none;
+      }
+      &.right {
+        text-align: right;
+        background-image: none;
+      }
+    }
+  }*/
+  .zoom {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    display: none;
+  }
+  .wrapper {
+    @include center-content(900px);
+    margin-top: 30px;
+    .content {
+      text-align: center;
+      .view {
+        display: block;
+        width: 900px !important;
+        height: 550px !important;
+        img {
+          display: block;
+          width: 900px !important;
+          height: 550px !important;
+        }
+      }
+      .thumbs {
+        width: 900px;
+        height: 140px;
+        position: relative;
+        margin: 20px 0;
+        .nav-left-thumbs,
+        .nav-right-thumbs {
+          position: absolute;
+          font-size: 36px;
+          font-weight: bold;
+          cursor: pointer;
+          transition-duration: .5s;
+          text-shadow: none;
+          background: none;
+          opacity: 1;
+          width: 60px;
+          height: 140px;
+          line-height: 140px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #999;
+          &:hover {
+            color: $main-color;
+          }
+        }
+        .nav-left-thumbs {
+          left: 0;
+          text-align: left;
+        }
+        .nav-right-thumbs {
+          right: 0;
+          text-align: right;
+        }
+        .pics-thumbs {
+          position: relative;
+          margin: 0 60px;
+          white-space: nowrap;
+          overflow: hidden;
+          transition-duration: .8s;
+          img {
+            cursor: pointer;
+            width: 180px;
+            height: 140px;
+            transition-duration: .5s;
+            &:not(:last-of-type) {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .intro {
+    @include center-content(900px);
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: $text-color;
+    line-height: 2;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 15px auto 0;
+      & + img {
+        margin-top: 20px;
+      }
+      & + p,
+      & + div {
+        margin-top: 15px;
+      }
+      & + div {
+        div,
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+    p,
+    div {
+      line-height: 26px;
+      word-wrap: break-word;
+      margin-top: 15px;
+    }
+    div {
+      > p,
+      > div {
+        margin-top: 10px;
+      }
+    }
+  }
+  .contact {
+    @include center-content(900px);
+    margin-top: 30px;
+    font-size: 0;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+      color: $text-color;
+      line-height: 1.5;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      &:not(:first-of-type) {
+        margin-left: 15px;
+      }
+    }
+  }
+}
