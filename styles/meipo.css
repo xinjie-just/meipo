@@ -324,11 +324,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before, #marketProspect .body:before, #marketProspect .body .market-prospect-list:before, #requirementInvestmentGuide .body li:before, #commercialSupport .body:before, #commercialSupport .body ul li:before {
+.header .heading:before, .home-about > .intro:before, .home-about > .details:before, .home-product .product:before, .home-product .product .product-list:before, .home-news .list:before, .home-news .list .normal-news:before, .footer .footer-nav:before, .footer .intro:before, .footer .intro .contact-way:before, .main:not(.home-main) section .advantage-list:before, .main:not(.home-main) section .advantage-list li .advantage-intro:before, .contact-us .body:before, .news-classify .list:before, .experience-store .list:before, .case .list:before, .product-type .list:before, .trait-meabol li:before, .about-meablo .intro:before, .brand-story .intro:before, .content-wrapper:before, .sidebar-right article .heading:before, .project-details-info:before, #marketProspect .body:before, #marketProspect .body .market-prospect-list:before, #requirementInvestmentGuide .body li:before, #commercialSupport .body:before, #commercialSupport .body ul li:before {
   content: "";
   display: table;
 }
-.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after, #marketProspect .body:after, #marketProspect .body .market-prospect-list:after, #requirementInvestmentGuide .body li:after, #commercialSupport .body:after, #commercialSupport .body ul li:after {
+.header .heading:after, .home-about > .intro:after, .home-about > .details:after, .home-product .product:after, .home-product .product .product-list:after, .home-news .list:after, .home-news .list .normal-news:after, .footer .footer-nav:after, .footer .intro:after, .footer .intro .contact-way:after, .main:not(.home-main) section .advantage-list:after, .main:not(.home-main) section .advantage-list li .advantage-intro:after, .contact-us .body:after, .news-classify .list:after, .experience-store .list:after, .case .list:after, .product-type .list:after, .trait-meabol li:after, .about-meablo .intro:after, .brand-story .intro:after, .content-wrapper:after, .sidebar-right article .heading:after, .project-details-info:after, #marketProspect .body:after, #marketProspect .body .market-prospect-list:after, #requirementInvestmentGuide .body li:after, #commercialSupport .body:after, #commercialSupport .body ul li:after {
   content: "";
   display: table;
   clear: both;
@@ -357,7 +357,7 @@ label:hover {
   opacity: .8;
 }
 
-.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3, #commercialSupport .body ul li dl dt {
+.home-about > .details .info a strong, .home-product .product .product-list li:first-of-type strong, .home-product .product .product-list li:first-of-type p, .home-product .product .product-list li:not(:first-of-type) strong, .home-product .product .product-list li a .info strong, .join-support .list li, .home-news .list .importance-news .heading, .home-news .list .importance-news p, .home-news .list .normal-news li .heading, .news-classify .list li a, .experience-store .list li a, .experience-store .list li strong, .case .list li a, .case .list li .series, .product-type .list li .series, .sidebar-right article .heading h3, #commercialSupport .body ul li dl dt, .case-details-content-wrapper h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1428,7 +1428,10 @@ label:hover {
 }
 
 /*===联系我们===*/
-.main:not(.home-main) .tab {
+.main:not(.home-main) .tab a.active {
+  color: #a57e60;
+}
+.main:not(.home-main) .tab-nav {
   background-color: #fff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -1437,12 +1440,12 @@ label:hover {
   text-align: center;
   font-size: 0;
 }
-.main:not(.home-main) .tab.tab-fixed {
+.main:not(.home-main) .tab-nav.tab-fixed {
   z-index: 1001;
   position: fixed;
   top: 120px;
 }
-.main:not(.home-main) .tab a {
+.main:not(.home-main) .tab-nav a {
   display: inline-block;
   vertical-align: middle;
   padding-right: 50px;
@@ -1450,7 +1453,7 @@ label:hover {
   font-size: 16px;
   color: #151515;
 }
-.main:not(.home-main) .tab a:hover, .main:not(.home-main) .tab a.active {
+.main:not(.home-main) .tab-nav a:hover, .main:not(.home-main) .tab-nav a.active {
   color: #a57e60;
 }
 .main:not(.home-main) section {
@@ -1864,6 +1867,17 @@ label:hover {
 }
 
 /*===产品中心===*/
+.tab-nav a.active {
+  color: #a57e60;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
 .product-type .list {
   display: block;
   margin-right: auto;
@@ -1914,6 +1928,129 @@ label:hover {
   padding-right: 1em;
   padding-left: 1em;
   transition: all 0.6s linear 0s;
+}
+
+.trait-meabol {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1050px;
+}
+.trait-meabol li figure {
+  z-index: 10;
+  position: relative;
+  display: block;
+  width: 405px;
+  height: 280px;
+}
+.trait-meabol li figure img {
+  display: block;
+  position: absolute;
+}
+.trait-meabol li figure img:first-of-type {
+  width: 380px;
+  height: 250px;
+  z-index: 12;
+}
+.trait-meabol li figure img:last-of-type {
+  z-index: 11;
+}
+.trait-meabol li:nth-of-type(1) figure img:first-of-type {
+  top: 0;
+  left: 0;
+}
+.trait-meabol li:nth-of-type(1) figure img:last-of-type {
+  right: 0;
+  bottom: 0;
+}
+.trait-meabol li:nth-of-type(2) figure img:first-of-type {
+  right: 0;
+  bottom: 0;
+}
+.trait-meabol li:nth-of-type(2) figure img:last-of-type {
+  top: 0;
+  left: 0;
+}
+.trait-meabol li:nth-of-type(3) figure img:first-of-type {
+  left: 0;
+  bottom: 0;
+}
+.trait-meabol li:nth-of-type(3) figure img:last-of-type {
+  top: 0;
+  right: 0;
+}
+.trait-meabol li:nth-of-type(4) figure img:first-of-type {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.trait-meabol li:nth-of-type(4) figure img:last-of-type {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.trait-meabol li:nth-of-type(5) figure img:first-of-type {
+  left: 0;
+  bottom: 0;
+}
+.trait-meabol li:nth-of-type(5) figure img:last-of-type {
+  top: 0;
+  right: 0;
+}
+.trait-meabol li:nth-of-type(6) figure img:first-of-type {
+  right: 0;
+  top: 0;
+}
+.trait-meabol li:nth-of-type(6) figure img:last-of-type {
+  bottom: 0;
+  left: 0;
+}
+.trait-meabol li:nth-of-type(7) figure img:first-of-type {
+  top: 0;
+  left: 0;
+}
+.trait-meabol li:nth-of-type(7) figure img:last-of-type {
+  right: 0;
+  bottom: 0;
+}
+.trait-meabol li:nth-of-type(8) figure img:first-of-type {
+  right: 0;
+  top: 0;
+}
+.trait-meabol li:nth-of-type(8) figure img:last-of-type {
+  left: 0;
+  bottom: 0;
+}
+.trait-meabol li .text {
+  width: calc(100% - 405px - 30px);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.trait-meabol li .text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a122e;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+.trait-meabol li .text p {
+  color: #333;
+  font-size: 14px;
+  line-height: 2;
+}
+.trait-meabol li:nth-of-type(2n + 1) figure {
+  float: left;
+}
+.trait-meabol li:nth-of-type(2n + 1) .text {
+  float: right;
+}
+.trait-meabol li:nth-of-type(2n + 2) figure {
+  float: right;
+}
+.trait-meabol li:nth-of-type(2n + 2) .text {
+  float: left;
 }
 
 /*===关于美珀===*/
@@ -2308,7 +2445,8 @@ label:hover {
   font-size: 16px;
   font-weight: 600;
   color: #0a122e;
-  margin-bottom: 10px;
+  line-height: 1.5;
+  margin-bottom: 8px;
   padding-left: 20px;
 }
 #marketProspect .body .market-prospect-list li h4::before {
@@ -2600,6 +2738,7 @@ label:hover {
   font-size: 18px;
   font-weight: 600;
   color: #333;
+  line-height: 1.5;
   margin-bottom: 23px;
 }
 #requirementInvestmentGuide .body li .text dd {
@@ -2784,6 +2923,82 @@ label:hover {
 }
 #commercialSupport .body ul li:nth-of-type(20) dl dt::before {
   content: "20";
+}
+
+/*===案例详情===*/
+.case-details-breadcrumbs {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  margin-top: 60px;
+}
+
+.case-details-content-wrapper {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  margin-top: 30px;
+}
+.case-details-content-wrapper h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #e5c27b;
+}
+.case-details-content-wrapper .case-info {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  margin-top: 18px;
+}
+.case-details-content-wrapper .case-info .tag {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #333;
+}
+.case-details-content-wrapper .case-info .tag:not(:first-child) {
+  margin-left: 15px;
+  padding-left: 16px;
+  border-left: 1px solid;
+}
+.case-details-content-wrapper .content {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.case-details-content-wrapper .content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto 0;
+}
+.case-details-content-wrapper .content img + img {
+  margin-top: 20px;
+}
+.case-details-content-wrapper .content img + p, .case-details-content-wrapper .content img + div {
+  margin-top: 15px;
+}
+.case-details-content-wrapper .content img + div div,
+.case-details-content-wrapper .content img + div p {
+  margin-top: 10px;
+}
+.case-details-content-wrapper .content p,
+.case-details-content-wrapper .content div {
+  line-height: 26px;
+  word-wrap: break-word;
+  margin-top: 15px;
+}
+.case-details-content-wrapper .content div > p,
+.case-details-content-wrapper .content div > div {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=meipo.css.map */

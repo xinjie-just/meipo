@@ -41,7 +41,7 @@
           background-image: url("../images/logo-black.png");
         }
         .phone {
-          color: #333;
+          color: $text-color;
         }
       }
     }
@@ -293,7 +293,7 @@
           max-height: 4.8em;
           width: 260px;
           font-size: 14px;
-          color: #333;
+          color: $text-color;
         }
         &:hover {
           background-color: #dadbdc;
@@ -359,7 +359,7 @@
 .home-product {
   @include wrapper-padding(80px, 80px);
   .heading {
-    color: #333;
+    color: $text-color;
   }
   .product {
     @extend %clearfix;
@@ -411,7 +411,7 @@
         line-height: 67px;
         border-bottom: 1px solid #ccc;
         font-size: 20px;
-        color: #333;
+        color: $text-color;
         padding-left: 30px;
         padding-right: 20px;
         &:hover {
@@ -440,7 +440,7 @@
       strong {
         display: block;
         font-size: 20px;
-        color: #333;
+        color: $text-color;
         margin-bottom: 15px;
         font-weight: normal;
       }
@@ -485,7 +485,7 @@
           strong {
             display: block;
             font-size: 18px;
-            color: #333;
+            color: $text-color;
             margin-top: 20px;
             margin-bottom: 8px;
             padding-right: 30px;
@@ -515,7 +515,7 @@
           strong {
             display: block;
             font-size: 14px;
-            color: #333;
+            color: $text-color;
             height: 40px;
             line-height: 40px;
             padding-right: 30px;
@@ -651,7 +651,7 @@
 .home-news {
   background-color: #fff;
   .heading {
-    color: #333;
+    color: $text-color;
   }
   .list {
     $width: 340px;
@@ -929,6 +929,13 @@
 .main:not(.home-main) {
   $color: #f5f5f5;
   .tab {
+    a {
+      &.active {
+        color: $main-color;
+      }
+    }
+  }
+  .tab-nav {
     background-color: #fff;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
     width: 100%;
@@ -973,7 +980,7 @@
       display: table;
       margin: 0 auto 40px;
       padding: 0 60px 15px;
-      color: #333;
+      color: $text-color;
       border-bottom: 1px solid #999;
       &::after {
         content: "";
@@ -991,7 +998,7 @@
         text-align: center;
       }
       .cn {
-        color: #333;
+        color: $text-color;
         line-height: .9;
         font-family: "webfont", Arial, sans-serif;
         font-weight: normal;
@@ -1106,7 +1113,7 @@
           line-height: 40px;
           font-size: 18px;
           font-weight: 500;
-          color: #333;
+          color: $text-color;
           margin-bottom: 19px;
           padding-bottom: 10px;
           border-bottom: 1px solid #ccc;
@@ -1137,7 +1144,7 @@
           @extend %clearfix;
           margin-top: 14px;
           font-size: 14px;
-          color: #333;
+          color: $text-color;
           line-height: 24px;
           width: 400px;
           max-height: 96px;
@@ -1341,6 +1348,19 @@
 }
 
 /*===产品中心===*/
+.tab-nav {
+  a {
+    &.active {
+      color: $main-color;
+    }
+  }
+}
+.tab-content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 .product-type {
   .list {
     @include center-content(1200px);
@@ -1389,6 +1409,179 @@
         padding-right: 1em;
         padding-left: 1em;
         @include transition(0.6s);
+      }
+    }
+  }
+}
+.trait-meabol {
+  @include wrapper-padding(60px, 60px);
+  @include center-content(1050px);
+  li {
+    @extend %clearfix;
+    figure {
+      z-index: 10;
+      position: relative;
+      display: block;
+      width: 405px;
+      height: 280px;
+      img {
+        display: block;
+        position: absolute;
+        &:first-of-type {
+          width: 380px;
+          height: 250px;
+          z-index: 12;
+        }
+        &:last-of-type {
+          z-index: 11;
+        }
+      }
+    }
+    &:nth-of-type(1) {
+      figure {
+        img {
+          &:first-of-type {
+            top: 0;
+            left: 0;
+          }
+          &:last-of-type {
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      figure {
+        img {
+          &:first-of-type {
+            right: 0;
+            bottom: 0;
+          }
+          &:last-of-type {
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      figure {
+        img {
+          &:first-of-type {
+            left: 0;
+            bottom: 0;
+          }
+          &:last-of-type {
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      figure {
+        img {
+          &:first-of-type {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+          &:last-of-type {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      figure {
+        img {
+          &:first-of-type {
+            left: 0;
+            bottom: 0;
+          }
+          &:last-of-type {
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      figure {
+        img {
+          &:first-of-type {
+            right: 0;
+            top: 0;
+          }
+          &:last-of-type {
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(7) {
+      figure {
+        img {
+          &:first-of-type {
+            top: 0;
+            left: 0;
+          }
+          &:last-of-type {
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    &:nth-of-type(8) {
+      figure {
+        img {
+          &:first-of-type {
+            right: 0;
+            top: 0;
+          }
+          &:last-of-type {
+            left: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .text {
+      width: calc(100% - 405px - 30px);
+      padding-top: 60px;
+      padding-bottom: 60px;
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0a122e;
+        line-height: 1.4;
+        margin-bottom: 18px;
+      }
+      p {
+        color: $text-color;
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+    &:nth-of-type(2n + 1) {
+      figure {
+        float: left;
+      }
+      .text {
+        float: right;
+      }
+    }
+    &:nth-of-type(2n + 2) {
+      figure {
+        float: right;
+      }
+      .text {
+        float: left;
       }
     }
   }
@@ -1801,7 +1994,8 @@
           font-size: 16px;
           font-weight: 600;
           color: #0a122e;
-          margin-bottom: 10px;
+          line-height: 1.5;
+          margin-bottom: 8px;
           padding-left: 20px;
           &::before {
             content: "";
@@ -1819,7 +2013,7 @@
           line-height: 30px;
           max-height: calc(30px * 4);
           font-size: 14px;
-          color: #333;
+          color: $text-color;
         }
       }
     }
@@ -1868,7 +2062,7 @@
       border: 1px solid #ccc;
       border-radius: 20px;
       font-size: 14px;
-      color: #333;
+      color: $text-color;
       &:not(:last-of-type) {
         margin-bottom: 32px;
         &::before {
@@ -1907,7 +2101,7 @@
     display: table;
     margin: 30px auto 0;
     padding: 10px 220px;
-    color: #333;
+    color: $text-color;
     font-size: 14px;
 
     &::before,
@@ -2066,14 +2260,15 @@
           display: block;
           font-size: 18px;
           font-weight: 600;
-          color: #333;
+          color: $text-color;
+          line-height: 1.5;
           margin-bottom: 23px;
         }
         dd {
           display: block;
           font-size: 14px;
           font-weight: normal;
-          color: #333;
+          color: $text-color;
           &:only-of-type {
             line-height: 2;
           }
@@ -2172,7 +2367,7 @@
           display: block;
           float: right;
           width: calc(100% - 40px - 20px);
-          color: #333;
+          color: $text-color;
           dt {
             @extend %ellipsis;
             position: relative;
@@ -2216,6 +2411,81 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+/*===案例详情===*/
+.case-details-breadcrumbs {
+  @include center-content(1200px);
+  margin-top: 60px;
+}
+.case-details-content-wrapper {
+  @include center-content(1200px);
+  margin-top: 30px;
+  h1 {
+    @extend %ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    color: $text-color;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #e5c27b;
+  }
+  .case-info {
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    margin-top: 18px;
+    .tag {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: $text-color;
+      &:not(:first-child) {
+        margin-left: 15px;
+        padding-left: 16px;
+        border-left: 1px solid;
+      }
+    }
+  }
+  .content {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 15px auto 0;
+      & + img {
+        margin-top: 20px;
+      }
+      & + p,
+      & + div {
+        margin-top: 15px;
+      }
+      & + div {
+        div,
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+    p,
+    div {
+      line-height: 26px;
+      word-wrap: break-word;
+      margin-top: 15px;
+    }
+    div {
+      > p,
+      > div {
+        margin-top: 10px;
       }
     }
   }

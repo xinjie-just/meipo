@@ -56,16 +56,17 @@ $(".js-wechat-icon").hover(
         $(".js-qrcode").slideUp(400);
     }
 );
-
 $(".js-tab").find("a").click(function () {
     $(this).addClass("active");
     $(this).siblings("a").removeClass("active");
 });
-$(".js-switch-tab").find("a").click(function () {
+$(".tab-nav").find("a").click(function () {
+    $(this).addClass("active");
+    $(this).siblings("a").removeClass("active");
     var linkIndex = $(this).index();
-    var $section = $(this).parents("#main").find("section");
-    $($section[linkIndex]).addClass("active");
-    $($section[linkIndex]).siblings("section").removeClass("active");
+    var $content = $(this).parents(".tab-nav").siblings(".tab-content");
+    $($content[linkIndex]).addClass("active");
+    $($content[linkIndex]).siblings(".tab-content").removeClass("active");
 });
 
 // 当前页面地址与路由匹配情况
