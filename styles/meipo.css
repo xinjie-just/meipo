@@ -315,6 +315,7 @@ th {
 
 ::selection {
   background-color: #a57e60;
+  color: #fff;
 }
 
 /* ===列表=== */
@@ -563,6 +564,8 @@ label:hover {
 }
 .header .heading .header-logo a {
   display: block;
+  width: inherit;
+  height: inherit;
 }
 .header .heading .phone-menu {
   float: right;
@@ -682,17 +685,17 @@ label:hover {
 .home-about > .intro figure::before, .home-about > .intro figure::after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: -20px;
+  bottom: -30px;
+  left: -30px;
   background-color: #d9dbe0;
 }
 .home-about > .intro figure::before {
-  width: 20px;
-  height: 270px;
+  width: 30px;
+  height: 280px;
 }
 .home-about > .intro figure::after {
-  width: 420px;
-  height: 20px;
+  width: 430px;
+  height: 30px;
 }
 .home-about > .intro .text {
   float: right;
@@ -710,11 +713,11 @@ label:hover {
 }
 .home-about > .intro .text .heading strong {
   font-family: "webfont", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
   line-height: 1.6;
   text-transform: uppercase;
-  letter-spacing: 15px;
+  letter-spacing: 16px;
 }
 .home-about > .intro .text .heading strong::after {
   content: "\A";
@@ -737,7 +740,7 @@ label:hover {
 }
 .home-about > .intro .text .more {
   display: table-cell;
-  padding: 10px 23px;
+  padding: 7px 23px;
   border: 1px solid;
   text-transform: uppercase;
   font-size: 14px;
@@ -772,6 +775,7 @@ label:hover {
   line-height: inherit;
   color: #000;
   font-size: 22px;
+  font-weight: 300;
 }
 .home-about > .details .info a p {
   position: absolute;
@@ -961,7 +965,7 @@ label:hover {
 }
 .home-product .product .more {
   display: inline-block;
-  padding: 10px 23px;
+  padding: 7px 25px;
   margin-left: 30px;
   border: 1px solid;
   text-transform: uppercase;
@@ -1222,10 +1226,6 @@ label:hover {
   color: #a57e60;
 }
 .home-news .list .normal-news li p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6em;
-  max-height: 3.2em;
   /*多行文本省略*/
   display: -webkit-box !important;
   overflow: hidden;
@@ -1233,11 +1233,15 @@ label:hover {
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6em;
+  max-height: calc(1.6em * 2);
 }
 .home-news .more {
   display: table;
   margin: 40px auto 0;
-  padding: 10px 23px;
+  padding: 7px 23px;
   border: 1px solid;
   text-transform: uppercase;
   font-size: 14px;
@@ -1405,7 +1409,7 @@ label:hover {
 }
 .pagination > li > a,
 .pagination > li > span {
-  color: #050c23;
+  color: #283356;
   border-color: #d4d4d4;
   background-color: #fff;
 }
@@ -1413,8 +1417,8 @@ label:hover {
 .pagination > li > span:focus,
 .pagination > li > span:hover {
   color: #fff;
-  border-color: #050c23;
-  background-color: #050c23;
+  border-color: #283356;
+  background-color: #283356;
 }
 .pagination > .active > a,
 .pagination > .active > a:focus,
@@ -1423,14 +1427,12 @@ label:hover {
 .pagination > .active > span:focus,
 .pagination > .active > span:hover {
   color: #fff;
-  border-color: #050c23;
-  background-color: #050c23;
+  border-color: #283356;
+  background-color: #283356;
 }
 
 /*===联系我们===*/
-.main:not(.home-main) .tab a.active {
-  color: #a57e60;
-}
+.main:not(.home-main) .tab,
 .main:not(.home-main) .tab-nav {
   background-color: #fff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
@@ -1440,11 +1442,13 @@ label:hover {
   text-align: center;
   font-size: 0;
 }
+.main:not(.home-main) .tab.tab-fixed,
 .main:not(.home-main) .tab-nav.tab-fixed {
   z-index: 1001;
   position: fixed;
   top: 120px;
 }
+.main:not(.home-main) .tab a,
 .main:not(.home-main) .tab-nav a {
   display: inline-block;
   vertical-align: middle;
@@ -1453,7 +1457,9 @@ label:hover {
   font-size: 16px;
   color: #151515;
 }
-.main:not(.home-main) .tab-nav a:hover, .main:not(.home-main) .tab-nav a.active {
+.main:not(.home-main) .tab a:hover, .main:not(.home-main) .tab a.active,
+.main:not(.home-main) .tab-nav a:hover,
+.main:not(.home-main) .tab-nav a.active {
   color: #a57e60;
 }
 .main:not(.home-main) section {
@@ -1466,7 +1472,7 @@ label:hover {
 }
 .main:not(.home-main) section.about-type {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   display: none;
 }
 .main:not(.home-main) section.about-type.active {
@@ -1477,20 +1483,26 @@ label:hover {
   position: relative;
   display: table;
   margin: 0 auto 40px;
-  padding: 0 60px 15px;
+  padding: 0 80px 18px;
   color: #333;
-  border-bottom: 1px solid #999;
+}
+.main:not(.home-main) section > .heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(50% - 20px);
+  height: 1px;
+  background-color: #999;
 }
 .main:not(.home-main) section > .heading::after {
   content: "";
   position: absolute;
-  bottom: calc(-3px);
-  left: 50%;
-  width: 6px;
-  height: 6px;
+  bottom: 0;
+  right: 0;
+  width: calc(50% - 20px);
+  height: 1px;
   background-color: #999;
-  transform: translateX(-50%) rotate(45deg);
-  outline: 10px solid #f5f5f5;
 }
 .main:not(.home-main) section > .heading strong {
   display: block;
@@ -1511,6 +1523,16 @@ label:hover {
   text-transform: capitalize;
   font-size: 14px;
   line-height: 1;
+}
+.main:not(.home-main) section > .heading .en::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: #999;
+  transform: translateX(-50%) rotate(45deg);
 }
 .main:not(.home-main) section .advantage-list {
   display: block;
@@ -1665,9 +1687,9 @@ label:hover {
   margin-top: 14px;
   font-size: 14px;
   color: #333;
-  line-height: 24px;
+  line-height: 2em;
   width: 400px;
-  max-height: 96px;
+  max-height: calc(2em * 4);
 }
 .main:not(.home-main) section .advantage-list li .advantage-intro span {
   display: block;
@@ -1730,6 +1752,7 @@ label:hover {
   display: block;
   color: #000;
   font-size: 16px;
+  font-weight: 600;
   line-height: 2;
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
@@ -1748,8 +1771,8 @@ label:hover {
   -webkit-line-clamp: 2;
   font-size: 14px;
   color: #666;
-  line-height: 1.5em;
-  max-height: 3em;
+  line-height: 2em;
+  max-height: calc(2em * 2);
 }
 
 /*===体验店风采===*/
@@ -1867,10 +1890,6 @@ label:hover {
 }
 
 /*===产品中心===*/
-.tab-nav a.active {
-  color: #a57e60;
-}
-
 .tab-content {
   display: none;
 }
@@ -2077,17 +2096,17 @@ label:hover {
 .about-meablo .intro figure::before, .about-meablo .intro figure::after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: -20px;
+  bottom: -30px;
+  left: -30px;
   background-color: #d9dbe0;
 }
 .about-meablo .intro figure::before {
-  width: 20px;
-  height: 270px;
+  width: 30px;
+  height: 280px;
 }
 .about-meablo .intro figure::after {
-  width: 420px;
-  height: 20px;
+  width: 430px;
+  height: 30px;
 }
 .about-meablo .intro .text {
   float: right;
@@ -2191,26 +2210,79 @@ label:hover {
   height: 600px;
 }
 
+.brand-idea .content {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333;
+}
+.brand-idea .content p,
+.brand-idea .content h2,
+.brand-idea .content h3,
+.brand-idea .content h4,
+.brand-idea .content h5,
+.brand-idea .content h6,
+.brand-idea .content .heading,
+.brand-idea .content .sub-heading {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  text-align: center;
+}
+.brand-idea .content .heading,
+.brand-idea .content .sub-heading {
+  font-size: 18px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.brand-idea .content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto 0;
+}
+.brand-idea .content img + img {
+  margin-top: 20px;
+}
+.brand-idea .content img + p, .brand-idea .content img + div {
+  margin-top: 15px;
+}
+.brand-idea .content img + div div,
+.brand-idea .content img + div p {
+  margin-top: 10px;
+}
+.brand-idea .content p,
+.brand-idea .content div {
+  line-height: 26px;
+  word-wrap: break-word;
+  margin-top: 15px;
+}
+.brand-idea .content div > p,
+.brand-idea .content div > div {
+  margin-top: 10px;
+}
+
 /*===面包屑导航===*/
 .breadcrumbs {
   position: relative;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
   margin-bottom: 10px;
 }
 .breadcrumbs ol {
   position: absolute;
   top: 0;
   left: 0;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
 }
 .breadcrumbs ol li {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
   padding-left: 20px;
   color: #333;
 }
@@ -2301,7 +2373,7 @@ label:hover {
 }
 
 .sidebar-right article {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 14px;
   line-height: 26px;
   color: #333;
@@ -2355,6 +2427,9 @@ label:hover {
 }
 
 /*===产品详情===*/
+.project-details-info {
+  margin-top: 30px;
+}
 .project-details-info img {
   float: left;
   display: block;
@@ -2609,9 +2684,6 @@ label:hover {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-#advantageInverstmentGuide .heading::after {
-  outline-color: #fff;
-}
 #advantageInverstmentGuide .body {
   position: relative;
   width: 987px;
@@ -2633,11 +2705,11 @@ label:hover {
   position: relative;
   font-size: 14px;
   color: #fff;
-  line-height: 1.5;
+  line-height: 1.8;
   padding-left: 100px;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(2n + 1) {
   margin-left: 0;
@@ -2648,53 +2720,45 @@ label:hover {
 #advantageInverstmentGuide .body .advantage-inverstment-list li::before {
   position: absolute;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
   color: #e5c27b;
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 600;
   font-style: italic;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(1)::before {
   content: "01";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(2)::before {
   content: "02";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(3)::before {
   content: "03";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(4)::before {
   content: "04";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(5)::before {
   content: "05";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(6)::before {
   content: "06";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(7)::before {
   content: "07";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(8)::before {
   content: "08";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li:nth-of-type(9)::before {
   content: "09";
-  left: 0;
 }
 #advantageInverstmentGuide .body .advantage-inverstment-list li::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 42px;
+  left: 46px;
   width: 40px;
   height: 1px;
   border-top: 1px dashed #e5c27b;
@@ -2789,9 +2853,6 @@ label:hover {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #fff;
-}
-#commercialSupport .heading::after {
-  outline-color: #fff;
 }
 #commercialSupport .body {
   display: block;
@@ -2948,19 +3009,19 @@ label:hover {
   height: 36px;
   line-height: 36px;
   text-align: center;
-  background-color: #e5c27b;
+  background-color: rgba(229, 194, 123, 0.3);
 }
 .case-details-content-wrapper .case-info {
   width: 100%;
   text-align: center;
   font-size: 0;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 .case-details-content-wrapper .case-info .tag {
   display: inline-block;
   vertical-align: middle;
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1;
   font-weight: 500;
   color: #333;
 }
@@ -2971,7 +3032,7 @@ label:hover {
 }
 .case-details-content-wrapper .content {
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 80px;
 }
 .case-details-content-wrapper .content img {
@@ -3017,66 +3078,6 @@ label:hover {
   width: 1200px;
   margin-top: 30px;
   margin-bottom: 80px;
-  /*.big-img {
-    display: block;
-    width: 900px;
-    height: 550px;
-    margin: 30px auto 0;
-    img {
-      display: none;
-      width: inherit;
-      height: inherit;
-      &.active {
-        display: block;
-      }
-    }
-  }
-  .experience-store-details-carousel {
-    @include center-content(900px);
-    margin-top: 30px;
-    .carousel-inner {
-      width: calc(100% - 120px);
-      height: 140px;
-      left: 50%;
-      transform: translateX(-50%);
-      img {
-        display: block;
-        float: left;
-        width: 180px;
-        height: 140px;
-        &:not(:last-of-type) {
-          margin-right: 20px;
-        }
-      }
-    }
-    .carousel-control {
-      text-shadow: none;
-      background: none;
-      opacity: 1;
-      width: 60px;
-      height: 140px;
-      line-height: 140px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #999;
-      border-radius: 100%;
-      span {
-        color: inherit;
-        font-size: 36px;
-      }
-      &:hover {
-        color: $main-color;
-      }
-      &.left {
-        text-align: left;
-        background-image: none;
-      }
-      &.right {
-        text-align: right;
-        background-image: none;
-      }
-    }
-  }*/
 }
 .experience-store--content-wrapper h1 {
   font-size: 16px;
@@ -3085,7 +3086,7 @@ label:hover {
   height: 36px;
   line-height: 36px;
   text-align: center;
-  background-color: #e5c27b;
+  background-color: rgba(229, 194, 123, 0.3);
 }
 .experience-store--content-wrapper .zoom {
   position: absolute;
@@ -3103,18 +3104,13 @@ label:hover {
   width: 900px;
   margin-top: 30px;
 }
-.experience-store--content-wrapper .wrapper .content {
+.experience-store--content-wrapper .wrapper .content .view {
   text-align: center;
 }
-.experience-store--content-wrapper .wrapper .content .view {
-  display: block;
-  width: 900px !important;
-  height: 550px !important;
-}
 .experience-store--content-wrapper .wrapper .content .view img {
-  display: block;
-  width: 900px !important;
-  height: 550px !important;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
 .experience-store--content-wrapper .wrapper .content .thumbs {
   width: 900px;
@@ -3160,9 +3156,10 @@ label:hover {
 }
 .experience-store--content-wrapper .wrapper .content .thumbs .pics-thumbs img {
   cursor: pointer;
-  width: 180px;
+  width: auto;
   height: 140px;
   transition-duration: .5s;
+  padding: 8px;
 }
 .experience-store--content-wrapper .wrapper .content .thumbs .pics-thumbs img:not(:last-of-type) {
   margin-right: 20px;

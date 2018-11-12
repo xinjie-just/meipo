@@ -33,8 +33,10 @@ function toTopDisplay() {
 function subMenuLocation() {
     if ($(window).scrollTop() >= 240) {  // 240px 是内页banner部分的高度
         $(".js-tab").addClass("tab-fixed");
+        $(".tab-nav").addClass("tab-fixed");
     } else {
         $(".js-tab").removeClass("tab-fixed");
+        $(".tab-nav").removeClass("tab-fixed");
     }
 }
 

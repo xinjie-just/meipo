@@ -15,7 +15,7 @@
         <header id="header" role="banner" class="header">
             <div class="heading-wrapper js-heading-wrapper">
                 <div class="heading">
-                    <h2 class="header-logo js-header-logo"></h2>
+                    <h2 class="header-logo js-header-logo"><a href="#" title="meabol"></a></h2>
                     <div class="phone-menu">
                         <div class="phone js-phone">加盟热线 <a href="tel:4006570567" title="给我们打电话">4006570567</a></div>
                         <nav class="header-nav" role="navigation">
@@ -47,7 +47,7 @@
                         <span>服务热线：<a href="tel:4006570567" title="给我们打电话">400-657-0567</a></span>
                         <span>联系电话：<a href="tel:08385586655" title="给我们打电话">0838-5586655</a></span>
                         <span>传真号码：0838-5196533</span>
-                        <span>公司地址：四川省广汉高新区台中路东段</span>
+                        <span>公司地址：四川省广汉高新区台中路东段67号</span>
                     </div>
                 </div>
             </section>
@@ -75,7 +75,7 @@
                         </strong>
                         <strong>传真号码：0838-5196533</strong>
                     </div>
-                    <div class="address">公司地址：四川省广汉高新区台中路东段</div>
+                    <div class="address">公司地址：四川省广汉高新区台中路东段67号</div>
                 </div>
                 <div class="contact-way">
                     <a href="javascript: void(0)" title="扫描微信二维码" class="wechat">
@@ -99,16 +99,20 @@
         <script src="scripts/meipo.js"></script>
         <script type="text/javascript">
             // 百度地图API功能
-            var baidumap = new BMap.Map("baidumap");    // 创建Map实例
-//            baidumap.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-            //添加地图类型控件
-            baidumap.addControl(new BMap.MapTypeControl({
-                mapTypes:[
-                    BMAP_NORMAL_MAP,
-                    BMAP_HYBRID_MAP
-                ]}));
-            baidumap.centerAndZoom("成都",15);
-            baidumap.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+            var map = new BMap.Map("baidumap");
+            var point = new BMap.Point(104.271846, 30.942823);
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            map.centerAndZoom(point, 15);
+            map.enableScrollWheelZoom(true);  // 允许地图缩放
+            var opts = {
+                width : 200,     // 信息窗口宽度
+                title : "美珀门窗" // 信息窗口标题
+            };
+            var infoWindow = new BMap.InfoWindow("地址：四川省广汉高新区台中路东段67号", opts);  // 创建信息窗口对象
+            marker.addEventListener("click", function(){
+                map.openInfoWindow(infoWindow, point); //开启信息窗口
+            });
         </script>
     </body>
 </html>
