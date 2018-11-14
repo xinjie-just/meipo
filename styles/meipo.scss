@@ -139,28 +139,12 @@
     > .heading {
       @include center-content(1200px);
       margin-bottom: 40px;
-      strong {
-        color: inherit;
+      img {
         display: block;
-        text-align: center;
-      }
-      .cn {
-        line-height: 36px;
-        font-family: "webfont", Arial, sans-serif;
-        font-weight: lighter;
-        font-size: 36px;
-        letter-spacing: 2px;
-        padding-left: 2px;
-        margin-bottom: 10px;
-      }
-      .en {
-        font-family: "webfont", Arial, sans-serif;
-        font-weight: lighter;
-        text-transform: uppercase;
-        font-size: 24px;
-        letter-spacing: 3px;
-        line-height: 24px;
-        padding-left: 3px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+        height: auto;
       }
     }
   }
@@ -216,37 +200,14 @@
       padding: 20px 30px 30px 50px;
       .heading {
         position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 26px;
+        margin-bottom: 22px;
         color: #000;
-        strong {
-          font-family: "webfont", Arial, sans-serif;
-          font-size: 20px;
-          font-weight: bolder;
-          line-height: 1.6;
-          text-transform: uppercase;
-          letter-spacing: 16px;
-          &::after {
-            content: "\A";
-            white-space: pre;
-          }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100px;
-          height: 1px;
-          background-color: #505050;
-        }
       }
       p {
         font-size: 16px;
         color: $text-color;
-        line-height: 1.6;
-        margin-bottom: 30px;
+        line-height: 2;
+        margin-bottom: 24px;
       }
       .more {
         display: table-cell;
@@ -372,35 +333,11 @@
     }
     .slogen {
       width: 240px;
-      height: 180px;
-      background: #212d4e url("../images/product-slogen-bg.png") center no-repeat;
-      padding-top: 50px;
-      padding-left: 20px;
-      strong {
-        font-family: "webfont", Arial, sans-serif;
-        color: #fff;
-        &.en {
-          font-weight: bolder;
-          text-transform: capitalize;
-          font-size: 12px;
-          &.important {
-            font-size: 34px;
-            font-weight: bolder;
-            line-height: 1;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: 6px;
-          }
-        }
-        &.cn {
-          font-size: 12px;
-          margin-bottom: 4px;
-          letter-spacing: 8px;
-        }
-        &::after {
-          content: "\A";
-          white-space: pre;
-        }
+      height: 160px;
+      img {
+        display: block;
+        width: 240px;
+        height: 160px;
       }
     }
     .product-nav {
@@ -416,34 +353,20 @@
         color: $text-color;
         padding-left: 30px;
         padding-right: 20px;
+        background: url("../images/home-product-center-arrow.png") no-repeat right 20px center / 20px;
         &:hover {
           color: $main-color;
-        }
-        &::after {
-          content: ">";
-          position: absolute;
-          top: 50%;
-          right: 20px;
-          transform: translateY(-50%);
-          width: 20px;
-          height: 20px;
-          line-height: 18px;
-          text-align: center;
-          font-size: 14px;
-          color: inherit;
-          border: 1px solid;
-          border-radius: 50%;
         }
       }
     }
     .phone {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       padding-left: 30px;
       strong {
         display: block;
         font-size: 20px;
         color: $text-color;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         font-weight: normal;
       }
       a {
@@ -487,6 +410,7 @@
           strong {
             display: block;
             font-size: 18px;
+            font-weight: 500;
             color: $text-color;
             margin-top: 20px;
             margin-bottom: 8px;
@@ -517,6 +441,7 @@
           strong {
             display: block;
             font-size: 14px;
+            font-weight: 500;
             color: $text-color;
             height: 40px;
             line-height: 40px;
@@ -1422,6 +1347,8 @@
 .trait-meabol {
   @include wrapper-padding(60px, 60px);
   @include center-content(1050px);
+  background-color: #f5f5f5;
+  box-shadow: 500px 0 0 0 #f5f5f5, -500px 0 0 0 #f5f5f5;
   li {
     @extend %clearfix;
     figure {
@@ -1757,13 +1684,13 @@
       display: block;
       max-width: 100%;
       height: auto;
-      margin: 15px auto 0;
+      margin: 40px auto 0;
       & + img {
         margin-top: 20px;
       }
       & + p,
       & + div {
-        margin-top: 15px;
+        margin-top: 40px;
       }
       & + div {
         div,
@@ -1776,7 +1703,7 @@
     div {
       line-height: 26px;
       word-wrap: break-word;
-      margin-top: 15px;
+      margin-top: 16px;
     }
     div {
       > p,
@@ -1806,22 +1733,22 @@
       vertical-align: middle;
       height: $size;
       line-height: $size;
-      padding-left: 20px;
       color: $text-color;
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-left: 25px;
+      &:not(:first-of-type) {
+        padding-left: 20px;
         &:before {
           content: "";
+          position: absolute;
+          width: calc(#{$size} - 4px - 6px);
+          height: calc(#{$size} - 4px - 6px);
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: url("../images/breadcrumbs-arrow.png") no-repeat left 3px center / 10px;
         }
       }
-      &:before {
-        content: ">";
-        position: absolute;
-        top: 0;
-        right: -18px;
+      &:first-of-type {
+        padding-right: 5px;
       }
       a {
         display: block;
@@ -1829,8 +1756,18 @@
         padding-right: 5px;
         padding-left: 5px;
         &.icon-home {
-          font-size: 24px;
-          color: #999;
+          width: calc(#{$size} - 4px);
+          height: calc(#{$size} - 4px);
+          line-height: calc(#{$size} - 4px);
+          text-align: center;
+          border-radius: 50%;
+          background-color: #999;
+          color: #fff;
+          font-size: calc(#{$size} - 4px - 12px);
+          &:hover {
+            color: #fff;
+            background-color: $main-color;
+          }
         }
         &:hover {
           color: $main-color;
@@ -2077,6 +2014,11 @@
           max-height: calc(30px * 4);
           font-size: 14px;
           color: $text-color;
+          word-break: normal;
+          strong {
+            color: $main-color;
+            font-weight: normal;
+          }
         }
       }
     }
@@ -2188,6 +2130,7 @@
       display: block;
       color: inherit;
       font-size: inherit;
+      font-weight: 400;
       margin-bottom: 6px;
       &::before,
       &::after {
@@ -2287,30 +2230,30 @@
     @include center-content(1030px);
     li {
       z-index: 10;
-      //position: relative;
-      //min-height: 180px;
+      position: relative;
+      min-height: 210px;
       @extend %clearfix;
       &:not(:last-of-type) {
         margin-bottom: 40px;
       }
       &::before {
-        //z-index: 11;
+        z-index: 11;
         display: block;
         content: "";
         position: absolute;
       }
       img {
-        //z-index: 20;  // 比父元素的 before 层级大
-        //position: absolute;
-        //top: 0;
+        z-index: 20;  // 比父元素的 before 层级大
+        position: absolute;
+        top: 0;
         display: block;
         width: 400px;
         height: 180px;
       }
       .text {
-        //z-index: 20;  // 比父元素的 before 层级大
-        //position: absolute;
-        //top: 0;
+        z-index: 20;  // 比父元素的 before 层级大
+        position: absolute;
+        top: 0;
         display: block;
         min-height: 180px;
         width: calc(100% - 400px - 30px);
@@ -2345,12 +2288,10 @@
           left: 360px;
         }
         img {
-          //left: 0;
-          float: left;
+          left: 0;
         }
         .text {
-          float: right;
-          //right: 0;
+          right: 0;
         }
       }
       &:nth-of-type(2n + 2) {
@@ -2362,13 +2303,14 @@
           right: 360px;
         }
         img {
-          float: right;
-          //right: 0;
+          right: 0;
         }
         .text {
-          float: left;
-          //left: 0;
+          left: 0;
         }
+      }
+      &:nth-of-type(3) {
+        min-height: 260px;
       }
       &:last-of-type {
         &::before {
@@ -2408,13 +2350,13 @@
           display: block;
           width: 40px;
           height: 40px;
-          line-height: 40px;
+          line-height: 36px;
           text-align: center;
           color: #002d62;
-          font-size: 40px;
-          font-weight: 600;
-          //border: 2px solid currentColor;
-          //border-radius: 50%;
+          font-size: 22px;
+          font-weight: normal;
+          border: 2px solid currentColor;
+          border-radius: 50%;
         }
         dl {
           display: block;

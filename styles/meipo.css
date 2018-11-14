@@ -500,28 +500,12 @@ label:hover {
   width: 1200px;
   margin-bottom: 40px;
 }
-.home-main section > .heading strong {
-  color: inherit;
+.home-main section > .heading img {
   display: block;
-  text-align: center;
-}
-.home-main section > .heading .cn {
-  line-height: 36px;
-  font-family: "webfont", Arial, sans-serif;
-  font-weight: lighter;
-  font-size: 36px;
-  letter-spacing: 2px;
-  padding-left: 2px;
-  margin-bottom: 10px;
-}
-.home-main section > .heading .en {
-  font-family: "webfont", Arial, sans-serif;
-  font-weight: lighter;
-  text-transform: uppercase;
-  font-size: 24px;
-  letter-spacing: 3px;
-  line-height: 24px;
-  padding-left: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /*走近美珀*/
@@ -578,37 +562,14 @@ label:hover {
 }
 .home-about > .intro .text .heading {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
   color: #000;
-}
-.home-about > .intro .text .heading strong {
-  font-family: "webfont", Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bolder;
-  line-height: 1.6;
-  text-transform: uppercase;
-  letter-spacing: 16px;
-}
-.home-about > .intro .text .heading strong::after {
-  content: "\A";
-  white-space: pre;
-}
-.home-about > .intro .text .heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 1px;
-  background-color: #505050;
 }
 .home-about > .intro .text p {
   font-size: 16px;
   color: #333;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  line-height: 2;
+  margin-bottom: 24px;
 }
 .home-about > .intro .text .more {
   display: table-cell;
@@ -755,36 +716,12 @@ label:hover {
 }
 .home-product .product .slogen {
   width: 240px;
-  height: 180px;
-  background: #212d4e url("../images/product-slogen-bg.png") center no-repeat;
-  padding-top: 50px;
-  padding-left: 20px;
+  height: 160px;
 }
-.home-product .product .slogen strong {
-  font-family: "webfont", Arial, sans-serif;
-  color: #fff;
-}
-.home-product .product .slogen strong.en {
-  font-weight: bolder;
-  text-transform: capitalize;
-  font-size: 12px;
-}
-.home-product .product .slogen strong.en.important {
-  font-size: 34px;
-  font-weight: bolder;
-  line-height: 1;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  letter-spacing: 6px;
-}
-.home-product .product .slogen strong.cn {
-  font-size: 12px;
-  margin-bottom: 4px;
-  letter-spacing: 8px;
-}
-.home-product .product .slogen strong::after {
-  content: "\A";
-  white-space: pre;
+.home-product .product .slogen img {
+  display: block;
+  width: 240px;
+  height: 160px;
 }
 .home-product .product .product-nav {
   margin-bottom: 30px;
@@ -800,34 +737,20 @@ label:hover {
   color: #333;
   padding-left: 30px;
   padding-right: 20px;
+  background: url("../images/home-product-center-arrow.png") no-repeat right 20px center/20px;
 }
 .home-product .product .product-nav a:hover {
   color: #a57e60;
 }
-.home-product .product .product-nav a::after {
-  content: ">";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  line-height: 18px;
-  text-align: center;
-  font-size: 14px;
-  color: inherit;
-  border: 1px solid;
-  border-radius: 50%;
-}
 .home-product .product .phone {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-left: 30px;
 }
 .home-product .product .phone strong {
   display: block;
   font-size: 20px;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-weight: normal;
 }
 .home-product .product .phone a {
@@ -870,6 +793,7 @@ label:hover {
 .home-product .product .product-list li:first-of-type strong {
   display: block;
   font-size: 18px;
+  font-weight: 500;
   color: #333;
   margin-top: 20px;
   margin-bottom: 8px;
@@ -894,6 +818,7 @@ label:hover {
 .home-product .product .product-list li:not(:first-of-type) strong {
   display: block;
   font-size: 14px;
+  font-weight: 500;
   color: #333;
   height: 40px;
   line-height: 40px;
@@ -1828,6 +1753,8 @@ label:hover {
   margin-right: auto;
   margin-left: auto;
   width: 1050px;
+  background-color: #f5f5f5;
+  box-shadow: 500px 0 0 0 #f5f5f5, -500px 0 0 0 #f5f5f5;
 }
 .trait-meabol li figure {
   z-index: 10;
@@ -2112,13 +2039,13 @@ label:hover {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 15px auto 0;
+  margin: 40px auto 0;
 }
 .brand-idea .content img + img {
   margin-top: 20px;
 }
 .brand-idea .content img + p, .brand-idea .content img + div {
-  margin-top: 15px;
+  margin-top: 40px;
 }
 .brand-idea .content img + div div,
 .brand-idea .content img + div p {
@@ -2128,7 +2055,7 @@ label:hover {
 .brand-idea .content div {
   line-height: 26px;
   word-wrap: break-word;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 .brand-idea .content div > p,
 .brand-idea .content div > div {
@@ -2155,23 +2082,23 @@ label:hover {
   vertical-align: middle;
   height: 30px;
   line-height: 30px;
-  padding-left: 20px;
   color: #333;
 }
-.breadcrumbs ol li:first-child {
-  padding-left: 0;
+.breadcrumbs ol li:not(:first-of-type) {
+  padding-left: 20px;
 }
-.breadcrumbs ol li:last-child {
-  padding-left: 25px;
-}
-.breadcrumbs ol li:last-child:before {
+.breadcrumbs ol li:not(:first-of-type):before {
   content: "";
-}
-.breadcrumbs ol li:before {
-  content: ">";
   position: absolute;
-  top: 0;
-  right: -18px;
+  width: calc(30px - 4px - 6px);
+  height: calc(30px - 4px - 6px);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("../images/breadcrumbs-arrow.png") no-repeat left 3px center/10px;
+}
+.breadcrumbs ol li:first-of-type {
+  padding-right: 5px;
 }
 .breadcrumbs ol li a {
   display: block;
@@ -2180,8 +2107,18 @@ label:hover {
   padding-left: 5px;
 }
 .breadcrumbs ol li a.icon-home {
-  font-size: 24px;
-  color: #999;
+  width: calc(30px - 4px);
+  height: calc(30px - 4px);
+  line-height: calc(30px - 4px);
+  text-align: center;
+  border-radius: 50%;
+  background-color: #999;
+  color: #fff;
+  font-size: calc(30px - 4px - 12px);
+}
+.breadcrumbs ol li a.icon-home:hover {
+  color: #fff;
+  background-color: #a57e60;
 }
 .breadcrumbs ol li a:hover {
   color: #a57e60;
@@ -2418,6 +2355,11 @@ label:hover {
   max-height: calc(30px * 4);
   font-size: 14px;
   color: #333;
+  word-break: normal;
+}
+#marketProspect .body .market-prospect-list li p strong {
+  color: #a57e60;
+  font-weight: normal;
 }
 
 /*加盟流程*/
@@ -2526,6 +2468,7 @@ label:hover {
   display: block;
   color: inherit;
   font-size: inherit;
+  font-weight: 400;
   margin-bottom: 6px;
 }
 #joinProcessInvestmentGuide .join-us .heading::before, #joinProcessInvestmentGuide .join-us .heading::after {
@@ -2650,21 +2593,30 @@ label:hover {
 }
 #requirementInvestmentGuide .body li {
   z-index: 10;
+  position: relative;
+  min-height: 210px;
 }
 #requirementInvestmentGuide .body li:not(:last-of-type) {
   margin-bottom: 40px;
 }
 #requirementInvestmentGuide .body li::before {
+  z-index: 11;
   display: block;
   content: "";
   position: absolute;
 }
 #requirementInvestmentGuide .body li img {
+  z-index: 20;
+  position: absolute;
+  top: 0;
   display: block;
   width: 400px;
   height: 180px;
 }
 #requirementInvestmentGuide .body li .text {
+  z-index: 20;
+  position: absolute;
+  top: 0;
   display: block;
   min-height: 180px;
   width: calc(100% - 400px - 30px);
@@ -2698,10 +2650,10 @@ label:hover {
   left: 360px;
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 1) img {
-  float: left;
+  left: 0;
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 1) .text {
-  float: right;
+  right: 0;
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 2)::before {
   width: 150px;
@@ -2711,10 +2663,13 @@ label:hover {
   right: 360px;
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 2) img {
-  float: right;
+  right: 0;
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 2) .text {
-  float: left;
+  left: 0;
+}
+#requirementInvestmentGuide .body li:nth-of-type(3) {
+  min-height: 260px;
 }
 #requirementInvestmentGuide .body li:last-of-type::before {
   top: -32px;
@@ -2755,11 +2710,13 @@ label:hover {
   display: block;
   width: 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 36px;
   text-align: center;
   color: #002d62;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: normal;
+  border: 2px solid currentColor;
+  border-radius: 50%;
 }
 #commercialSupport .body ul li dl {
   display: block;
