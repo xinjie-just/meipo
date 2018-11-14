@@ -2595,6 +2595,9 @@ label:hover {
   z-index: 10;
   position: relative;
   min-height: 210px;
+  /*&:nth-of-type(3) {
+    min-height: 260px;
+  }*/
 }
 #requirementInvestmentGuide .body li:not(:last-of-type) {
   margin-bottom: 40px;
@@ -2667,9 +2670,6 @@ label:hover {
 }
 #requirementInvestmentGuide .body li:nth-of-type(2n + 2) .text {
   left: 0;
-}
-#requirementInvestmentGuide .body li:nth-of-type(3) {
-  min-height: 260px;
 }
 #requirementInvestmentGuide .body li:last-of-type::before {
   top: -32px;

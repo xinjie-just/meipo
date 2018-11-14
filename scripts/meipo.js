@@ -7,6 +7,7 @@ $(function () {
     changeHeader();
     toTopDisplay();
     subMenuLocation();
+    setGuideStyle();
 });
 
 /*回到顶部*/
@@ -80,5 +81,15 @@ function matchUrl() {
             $(link[i]).addClass("active");
             $(link[i]).siblings("a").removeClass("active");
         }
+    }
+}
+
+/*设置加盟条件部分样式*/
+function setGuideStyle() {
+    var $li = $("#requirementInvestmentGuide").find("li");
+    for (var i = 0; i < $li.length; i++) {
+        var imgHeight = $li.eq(i).find("img").height();
+        var textHeight = $li.eq(i).find(".text").height();
+        $li.eq(i).height(imgHeight < textHeight ? (textHeight + 40) : (imgHeight + 40));
     }
 }
