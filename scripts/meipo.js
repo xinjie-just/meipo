@@ -90,6 +90,6 @@ function setGuideStyle() {
     for (var i = 0; i < $li.length; i++) {
         var imgHeight = $li.eq(i).find("img").height();
         var textHeight = $li.eq(i).find(".text").height();
-        $li.eq(i).height(imgHeight < textHeight ? (textHeight + 40) : (imgHeight + 40));
+        $li.eq(i).height(imgHeight <= textHeight ? (textHeight + 40) : (imgHeight + 40));
     }
 }
