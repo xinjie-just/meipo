@@ -401,22 +401,36 @@
           width: 620px;
           height: 500px;
           img {
+            position: absolute;
+            top: calc(50% - 40px);
+            left: 50%;
             display: block;
-            width: 618px;
-            height: 418px;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            //width: 618px;
+            //height: 418px;
           }
           strong {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 35px;
             display: block;
             font-size: 18px;
             font-weight: 500;
             color: $text-color;
-            margin-top: 20px;
-            margin-bottom: 8px;
             padding-right: 30px;
             padding-left: 30px;
             @extend %ellipsis;
           }
           p {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
             font-size: 12px;
             color: #666;
             padding-right: 30px;
@@ -434,11 +448,24 @@
         }
         &:not(:first-of-type) {
           img {
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 50%;
             display: block;
-            width: $width - 2;
-            height: $height - 42;
+            max-width: 100%;
+            max-height: calc(100% - 40px);
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            //width: $width - 2;
+            //height: $height - 42;
           }
           strong {
+            @extend %ellipsis;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
             display: block;
             font-size: 14px;
             font-weight: 500;
@@ -447,7 +474,6 @@
             line-height: 40px;
             padding-right: 30px;
             padding-left: 30px;
-            @extend %ellipsis;
           }
         }
         a {
@@ -471,9 +497,10 @@
             padding: 30px;
             transition: all 1.4s ease 0s;
             strong {
+              @extend %ellipsis;
+              position: static;
               font-size: 16px;
               margin-bottom: 14px;
-              @extend %ellipsis;
               color: inherit;
               padding-right: 0;
               padding-left: 0;
@@ -489,7 +516,7 @@
           }
           &:hover {
             .info {
-              margin-top: -($height - 2);
+              margin-top: 0;
             }
           }
         }
@@ -1180,17 +1207,24 @@
           color: $main-color;
           border-color: $main-color;
           img {
-            @include scale(1.1, 1.1);
+            transform: translate(-50%, -50%) scale(1.1, 1.1);
           }
         }
       }
       figure {
+        position: relative;
         width: 100%;
         height: 230px;
         img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           display: block;
-          width: 100%;
-          height: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
           @include transition(0.6s);
         }
       }
@@ -1309,12 +1343,19 @@
         }
       }
       figure {
+        position: relative;
         width: 100%;
         height: 200px;
         img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           display: block;
-          width: 100%;
-          height: 100%;
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
           @include transition(0.6s);
         }
       }
