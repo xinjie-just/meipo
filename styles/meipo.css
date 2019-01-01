@@ -2266,11 +2266,20 @@ label:hover {
 .project-details-info {
   margin-top: 30px;
 }
-.project-details-info img {
+.project-details-info figure {
   float: left;
   display: block;
   width: 500px;
   height: 360px;
+}
+.project-details-info img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .project-details-info .text {
   float: right;

@@ -1940,11 +1940,20 @@
 .project-details-info {
   @extend %clearfix;
   margin-top: 30px;
-  img {
+  figure {
     float: left;
     display: block;
     width: 500px;
     height: 360px;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
   .text {
     float: right;
