@@ -2965,6 +2965,9 @@ label:hover {
   width: 900px;
   margin-top: 30px;
 }
+.experience-store--content-wrapper .wrapper .content {
+  position: relative;
+}
 .experience-store--content-wrapper .wrapper .content .view {
   height: 550px !important;
 }
@@ -2975,6 +2978,31 @@ label:hover {
   height: 550px !important;
   margin-right: auto;
   margin-left: auto;
+}
+.experience-store--content-wrapper .wrapper .content .iconfont {
+  position: absolute;
+  top: calc((550px - 140px) / 2);
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  transition-duration: .5s;
+  text-shadow: none;
+  background: none;
+  opacity: 1;
+  width: 60px;
+  height: 140px;
+  line-height: 140px;
+  color: #999;
+}
+.experience-store--content-wrapper .wrapper .content .iconfont:hover {
+  color: #a57e60;
+}
+.experience-store--content-wrapper .wrapper .content .nav-left-thumbs {
+  left: -60px;
+}
+.experience-store--content-wrapper .wrapper .content .nav-right-thumbs {
+  right: -60px;
+  text-align: right;
 }
 .experience-store--content-wrapper .wrapper .content .thumbs {
   width: 900px;

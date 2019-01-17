@@ -52,13 +52,15 @@
                 <div id="zoom" class="zoom"></div>
                 <div id="wrapper" class="wrapper">
                     <div id="content" class="content">
+                        <div class="iconfont icon-left nav-left-thumbs" aria-hidden="true"></div>
                         <div id="view" class="view">
                             <!--这里默认使用第一张图，与下面第一张小图对应-->
                             <img src="images/stroe-image1.png" alt="体验店" />
                             <!--<img src="http:////via.placeholder.com/100x100" alt="">-->
                         </div>
+                        <div class="iconfont icon-right nav-right-thumbs" aria-hidden="true"></div>
                         <div id="thumbs" class="thumbs">
-                            <div id="nav-left-thumbs" class="iconfont icon-left nav-left-thumbs" aria-hidden="true"></div>
+                            <div class="iconfont icon-left nav-left-thumbs" aria-hidden="true"></div>
                             <div id="pics-thumbs" class="pics-thumbs">
                                 <!--下面图片仅用于测试-->
                                 <img src="images/stroe-image1.png" alt="体验店" />
@@ -76,7 +78,7 @@
                                 <img src="http:////via.placeholder.com/150x350" alt="">
                                 <img src="http:////via.placeholder.com/350x550" alt="">-->
                             </div>
-                            <div id="nav-right-thumbs" class="iconfont icon-right nav-right-thumbs" aria-hidden="true"></div>
+                            <div class="iconfont icon-right nav-right-thumbs" aria-hidden="true"></div>
                         </div>
                     </div>
                 </div>
@@ -141,9 +143,9 @@
             $(document).ready(function() {
                 $('#view').setZoomPicture({
                     thumbsContainer: '#pics-thumbs',
-                    prevContainer: '#nav-left-thumbs',
-                    nextContainer: '#nav-right-thumbs',
-                    zoomContainer: '#zoom',
+                    prevContainer: '.nav-left-thumbs',
+                    nextContainer: '.nav-right-thumbs',
+                    //zoomContainer: '#zoom',
                     zoomLevel: 1,
                     loadMsg: '大图加载中...'
                 });
